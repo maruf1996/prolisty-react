@@ -1,0 +1,81 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+.about1 {
+    &-thumb-wrapper {
+        position: relative;
+
+        &__thumb {
+            position: relative;
+            z-index: 3;
+            @include breakpoint(max-lg) {
+                margin-bottom: 40px;
+            }
+            .thumb-1 {
+                position: absolute;
+                right: 0;
+                bottom: -30px;
+            }
+
+            img {
+                border-radius: 30px;
+                @include breakpoint(max-xxl) {
+                    width: 88%;
+                }
+            }
+        }
+
+        &__shape1 {
+            position: absolute;
+            top: -43px;
+            left: -32px;
+            z-index: 1;
+        }
+
+        &__shape2 {
+            position: absolute;
+            bottom: -70px;
+            left: -90px;
+        }
+
+        &__shape3 {
+            position: absolute;
+            left: 200px;
+            bottom: -55px;
+        }
+    }
+
+    &-content {
+        &__list {
+            padding-top: 30px;
+
+            &-item {
+                color: $text-color;
+                font-family: $body-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 168%;
+                padding-bottom: 10px;
+
+                span {
+                    margin-right: 8px;
+                }
+
+                @include breakpoint(max-xxsmall) {
+                    padding-bottom: 6px;
+                    font-size: 18px;
+                 }
+            }
+        }
+
+
+        &__btn-wrapper {
+            padding-top: 30px;
+            @include breakpoint(max-xxsmall) {
+                padding-top: 20px;
+             }
+        }
+    }
+}

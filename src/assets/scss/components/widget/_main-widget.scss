@@ -1,0 +1,78 @@
+@use "../../root" as *;
+@use "../../utilities" as *;
+// Main Sidebar
+.single-sidebar-widget {
+  border-radius: 20px;
+  border: 1px solid $border-color;
+  background-color: $white-color;
+  padding: 40px;
+  @include breakpoint(max-xxsmall) {
+    padding: 30px 20px;
+  }
+  &.rp-widget {
+    padding: 30px;
+    @include breakpoint(max-xxsmall) {
+      padding: 30px 16px;
+    }
+  }
+  &.tag-widget {
+    padding: 30px;
+    @include breakpoint(max-xxsmall) {
+      padding: 30px 16px;
+    }
+  }
+  &__title {
+    color: $theme-color;
+    font-family: $title-font;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+    margin-bottom: 30px;
+  }
+
+  &-list {
+    &__item {
+      li {
+        background-color: $bg-color;
+        margin-bottom: 20px;
+        padding: 15px 30px;
+        border-radius: 100px;
+        color: $text-color;
+        font-family: $body-font;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        width: 100%;
+        position: relative;
+
+        a {
+          i {
+            margin-right: 5px;
+          }
+        }
+        @include breakpoint(max-xxl) {
+          padding: 10px;
+          font-size: 17px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .number {
+          position: absolute;
+          right: 30px;
+          @include breakpoint(max-xxsmall) {
+            right: 20px;
+          }
+        }
+
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

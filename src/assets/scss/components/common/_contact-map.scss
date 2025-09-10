@@ -1,0 +1,11 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+.contact-map {
+    iframe {
+        width: 100%;
+        height: 653px;
+        margin-bottom: -30px;
+        margin-top: -510px;
+    }
+}

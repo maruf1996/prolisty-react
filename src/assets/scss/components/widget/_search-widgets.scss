@@ -1,0 +1,37 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+// Search Widget
+.search-widget {
+    .form-control {
+        border-radius: 999px;
+        background-color: $bg-color;
+        padding: 16px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include breakpoint(max-xxsmall) {
+            padding: 10px 20px;  
+            }
+
+        i {
+            color: $theme-color;
+            @include breakpoint(max-xxsmall) {
+                padding-right: 20px;   
+               }
+        }
+    }
+
+    input {
+        border: none;
+        background-color: $bg-color;
+
+        &::placeholder {
+            color: $text-color; 
+            font-family: $body-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px;  
+        }
+    }
+}

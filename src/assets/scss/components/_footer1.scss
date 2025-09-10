@@ -1,0 +1,212 @@
+@use "../root" as *;
+@use "../utilities" as *;
+
+.footer1 {
+  position: relative;
+  z-index: 1;
+
+  &-bg {
+    padding-top: 180px;
+  }
+
+  &-widget__item {
+    padding-bottom: 44px;
+    @include breakpoint(max-xxsmall) {
+      padding-bottom: 20px;
+    }
+
+    &-title {
+      color: $white-color;
+      font-family: $title-font;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      padding-bottom: 36px;
+
+      @include breakpoint(max-xxsmall) {
+        padding-bottom: 24px;
+      }
+    }
+
+    &-list {
+      li {
+        padding-bottom: 24px;
+
+        @include breakpoint(max-xxsmall) {
+          padding-bottom: 16px;
+        }
+
+        a {
+          color: $white-color2;
+          font-family: $body-font;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+
+          @include breakpoint(max-xxsmall) {
+            font-size: 18px;
+            line-height: 100%;
+          }
+
+          span {
+            padding-right: 12px;
+          }
+
+          &:hover {
+            color: $theme-color !important;
+          }
+        }
+      }
+    }
+
+    &-text {
+      color: $white-color2;
+      font-family: $body-font;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding: 20px 0 30px 0;
+    }
+
+    &-left {
+      display: flex;
+      gap: 15px;
+      padding-bottom: 24px;
+
+      &-icon {
+        height: 48px;
+        width: 48px;
+        border-radius: 10px;
+        background-color: $theme-color;
+        color: $white-color2;
+        line-height: 48px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      &-contact {
+        &-title {
+          color: $white-color2;
+          font-family: $title-font;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 130%;
+          padding-bottom: 8px;
+        }
+
+        &-link {
+          color: $white-color2;
+          font-family: $body-font;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+
+          @include breakpoint(max-xxsmall) {
+            font-size: 18px;
+          }
+
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+    &-2 {
+      @media (max-width: 1399px) and (min-width: 1200px) {
+        margin-left: -5px;
+      }
+    }
+  }
+
+  &-bottom {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 2px;
+      width: 100%;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(238, 238, 238, 0) 0%,
+        rgba(238, 238, 238, 0) 0%,
+        rgba(238, 238, 238, 0) 24.7%,
+        rgba(136, 136, 136, 0) 50.17%,
+        rgba(136, 136, 136, 0) 70.67%,
+        #9747ff 92.67%
+      );
+    }
+
+    &-item {
+      padding: 40px 0 30px 0;
+
+      @include breakpoint(max-lg) {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        text-align: center;
+      }
+
+      &__text {
+        color: #f8f8f8;
+        font-family: $body-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include breakpoint(max-xl) {
+          font-size: 16px;
+        }
+
+        a {
+          color: $theme-color;
+          font-family: $body-font;
+          font-size: 17px;
+
+          &:hover {
+            color: $theme-color !important;
+          }
+        }
+      }
+
+      &__list {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 30px;
+
+        @include breakpoint(max-xxsmall) {
+          flex-wrap: wrap;
+          gap: 12px;
+          justify-content: center;
+        }
+
+        li {
+          a {
+            color: $theme-color;
+            font-family: $body-font;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+
+            @include breakpoint(max-xxsmall) {
+              font-size: 20px;
+            }
+
+            &:hover {
+              color: $theme-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

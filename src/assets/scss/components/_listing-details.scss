@@ -1,0 +1,254 @@
+@use "../root" as *;
+@use "../utilities" as *;
+
+.listing-details-page {
+  .listing-details-content {
+    &__title {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 20px;
+      color: $title-color;
+      @include breakpoint(max-xxsmall) {
+        font-size: 26px;
+        line-height: 34px;
+      }
+
+      i {
+        color: $theme-color;
+        padding-right: 10px;
+        @include breakpoint(max-xxsmall) {
+          padding-right: 6px;
+        }
+      }
+    }
+
+    &__text {
+      font-family: $body-font;
+      color: $text-color;
+      padding-bottom: 20px;
+    }
+
+    &-gallery {
+      border-top: 1px solid $border-color;
+      padding-top: 30px;
+      margin: 30px 0;
+
+      .gallery-item {
+        position: relative;
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .gallery-overly {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          content: "";
+          border-radius: 10px;
+          background-color: rgba(0, 0, 0, 0.2);
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            i {
+              color: $white-color;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      .video-item {
+        position: relative;
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .video-item-overlay {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          content: "";
+          border-radius: 10px;
+          background-color: rgba(0, 0, 0, 0.2);
+
+          &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+
+            i {
+              color: $white-color;
+              font-size: 42px;
+            }
+          }
+        }
+      }
+    }
+
+    &-map {
+      margin-top: 30px;
+      border-top: 1px solid $border-color;
+      padding-top: 30px;
+      margin-bottom: 50px;
+
+      .map {
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+
+    &-amenities {
+      padding-top: 40px;
+      border-top: 1px solid $border-color;
+      margin-bottom: 50px;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        @include breakpoint(max-xxsmall) {
+          gap: 20px;
+        }
+
+        li {
+          font-size: 18px;
+
+          i {
+            color: $theme-color;
+            padding-right: 8px;
+          }
+        }
+      }
+    }
+
+    &-feature {
+      border-top: 1px solid $border-color;
+      padding-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    &-contact {
+      border-top: 1px solid $border-color;
+      padding-top: 30px;
+      margin-bottom: 50px;
+
+      .website {
+        a {
+          color: $theme-color !important;
+        }
+      }
+    }
+
+    &-review {
+      border-top: 1px solid $border-color;
+      padding-top: 30px;
+      margin-bottom: 50px;
+
+      .score {
+        color: #fbc715;
+        padding-bottom: 15px;
+        @include breakpoint(max-xxsmall) {
+          padding-bottom: 0;
+        }
+      }
+
+      .review-overall {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 50px;
+        @include breakpoint(max-xxsmall) {
+          flex-wrap: wrap;
+        }
+
+        .review {
+          color: #fbc715;
+        }
+
+        .total {
+          display: inline-block;
+          margin-left: 10px;
+          color: $theme-color;
+          font-size: 18px;
+          font-weight: 700;
+          @include breakpoint(max-xxsmall) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .reviews-wrapper {
+        .reviews-item {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          margin-bottom: 40px;
+          @include breakpoint(max-xxsmall) {
+            gap: 16px;
+          }
+
+          &__photo {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            @include breakpoint(max-xxsmall) {
+              height: 80px;
+              width: 80px;
+            }
+
+            img {
+              height: 100px;
+              width: 100px;
+              border-radius: 50%;
+              @include breakpoint(max-xxsmall) {
+                height: 80px;
+                width: 80px;
+              }
+            }
+          }
+
+          &-info {
+            .name {
+              font-size: 20px;
+              font-weight: 700;
+              font-family: $title-font;
+              color: $title-color;
+            }
+            .comment {
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      &-login {
+        border-top: 1px solid $border-color;
+        padding-top: 30px;
+        .review-form {
+          a {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}

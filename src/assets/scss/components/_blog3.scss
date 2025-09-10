@@ -1,0 +1,111 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+.blog3 {
+    &-card {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        @include breakpoint(max-xl) {
+            margin-bottom: 30px;
+         }
+
+        &__thumb {
+            img {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            background-color: #f0f7fb;
+            border: 1px solid $border-color;
+            border-top: 0;
+            border-radius: 0 0 20px 20px;
+            padding: 40px 60px 60px;
+            position: relative;
+            z-index: 9;
+            @include breakpoint(max-lg) {
+                padding: 30px 24px;
+             }
+
+             @include breakpoint(max-xs) {
+               padding: 30px 20px;     
+               }
+
+            &-meta {
+                color: $text-color;
+                font-family: $body-font;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 30px;
+                @include breakpoint(max-xs) {
+                    margin-bottom: 16px; 
+                    gap: 12px;
+                   }
+
+                i {
+                    color: $theme-color;
+                    font-size: 12px;
+                    padding-right: 4px;
+                }
+            }
+
+            &-title {
+                color: $theme-color;
+                font-family: $title-font;
+                color: $theme-color; 
+                font-family: $title-font;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 44px; 
+                margin-bottom: 40px;
+                @include breakpoint(max-xxxl) {
+                    font-size: 28px;
+                    line-height: 34px;
+                 }
+
+                 @include breakpoint(max-xs) {
+                   margin-bottom: 20px;
+                   font-size: 20px;  
+                   line-height: 28px;     
+                  }
+            }
+
+            h3 {
+                color: $theme-color;
+                font-family: $title-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+            }
+
+            &-btn-wrapper {
+                .theme-btn {
+                    color: $theme-color;
+                    padding: 8px 0;
+                    color: $theme-color;
+                    font-family: $body-font;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+                    .svg-img{
+                        padding-left: 10px;
+                        transition: 0.3s all ease-in-out;
+                    }
+                    &:hover .svg-img{
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+}

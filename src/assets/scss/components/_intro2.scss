@@ -1,0 +1,230 @@
+@use "../root" as *;
+@use "../utilities" as *;
+
+.intro2 {
+  padding: 120px 0 160px 0;
+
+  @include breakpoint(max-md) {
+    padding: 90px 0;
+  }
+
+  @include breakpoint(max-xxsmall) {
+    padding-top: 70px;
+  }
+
+  &-content {
+    position: relative;
+
+    &__title {
+      color: #060505;
+      font-family: $title-font;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      padding-bottom: 16px;
+
+      @include breakpoint(max-xxl) {
+        font-size: 48px;
+      }
+
+      @include breakpoint(max-md) {
+        font-size: 42px;
+      }
+
+      @include breakpoint(max-xxsmall) {
+        font-size: 32px;
+        padding-bottom: 10px;
+      }
+    }
+
+    &__text {
+      color: #5f5e5e;
+      font-family: $body-font;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      max-width: 664px;
+      padding-bottom: 30px;
+
+      @include breakpoint(max-xxsmall) {
+        font-size: 18px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &__btn-wrapper {
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      height: 150px;
+      width: 150px;
+      position: relative;
+      border-radius: 20px;
+      margin-right: 50px;
+
+      img {
+        border-radius: 20px;
+      }
+
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        color: $white-color;
+        font-family: $body-font;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+
+      &::after {
+        border-radius: 20px;
+        content: "";
+        background: linear-gradient(
+          0deg,
+          rgba(6, 5, 5, 0.4) 0%,
+          rgba(6, 5, 5, 0.4) 100%
+        );
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.4s all ease-in-out;
+      }
+    }
+
+    .intro-thumb-slider {
+      .swiper-slide-thumb-active {
+        opacity: 1;
+        z-index: 9;
+
+        span {
+          opacity: 1;
+        }
+
+        &::after {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .swiper-arrow {
+    .swiper-next {
+      position: absolute;
+      bottom: 62px;
+      left: 0px;
+      z-index: 9;
+      color: $black;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      border: 1px solid $black;
+      text-align: center;
+      line-height: 45px;
+      background-color: $white-color;
+      font-size: 22px;
+      transition: 0.3s all ease-in-out;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid transparent;
+      }
+    }
+
+    .swiper-prev {
+      position: absolute;
+      bottom: 62px;
+      right: 0px;
+      z-index: 9;
+      color: $black;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      border: 1px solid $black;
+      text-align: center;
+      line-height: 45px;
+      background-color: $white-color;
+      font-size: 20px;
+      transition: 0.3s all ease-in-out;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  .intro-slider {
+    width: 100%;
+  }
+
+  .intro-thumb-slider {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-shape1 {
+    position: absolute;
+    left: -167px;
+    bottom: 100px;
+  }
+
+  &-shape2 {
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+
+    @include breakpoint(max-md) {
+      right: 0;
+      opacity: 0.2;
+    }
+  }
+
+  &-shape3 {
+    position: absolute;
+    height: 134px;
+    width: 134px;
+    background-color: #9747ff;
+    border-radius: 50%;
+    top: -50px;
+    right: 0px;
+    z-index: 9;
+    padding-top: 4px;
+    padding-left: 1px;
+
+    @include breakpoint(max-lg) {
+      top: auto;
+      bottom: 100px;
+      right: 100px;
+    }
+
+    .img1 {
+      width: 130px;
+      height: 130px;
+    }
+
+    .img2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+}

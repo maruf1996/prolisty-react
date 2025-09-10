@@ -1,0 +1,139 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.intro3 {
+    padding: 143px 0;
+
+    @include breakpoint(max-md) {
+      padding: 80px 0;          
+    }
+
+    &-wrapper {
+        display: flex;
+
+        @include breakpoint(max-lg) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-content {
+        &__title {
+            color: $white-color;
+            font-family: $title-font;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            padding-bottom: 16px;
+
+            @include breakpoint(max-xxl) {
+                font-size: 56px;
+            }
+
+            @include breakpoint(max-md) {
+               font-size: 42px; 
+            }
+
+            @include breakpoint(max-xxsmall) {
+              font-size: 34px;  
+            }
+        }
+
+        &__text {
+            color: $white-color;
+            font-family: $body-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            max-width: 680px;
+            @include breakpoint(max-md) {
+               font-size: 17px; 
+            }
+        }
+    }
+
+    &-thumb-wrapper {
+        display: flex;
+        width: 420px;
+        gap: 15px;
+
+        @include breakpoint(max-lg) {
+            margin-top: 50px;
+        }
+
+        .thumb1 {
+            margin-top: 86px;
+
+            img {
+                border-radius: 16px;
+            }
+        }
+
+        .thumb2 {
+            margin-top: -23px;
+            @include breakpoint(max-xxsmall) {
+                margin-top: -30px;
+                margin-left: -120px;
+            }
+            img {
+                border-radius: 16px;
+            }
+        }
+    }
+
+
+    &-shape1 {
+        position: absolute;
+        left: -80px;
+        bottom: 100px;
+    }
+
+    &-shape2 {
+        position: absolute;
+        right: -50px;
+        top: 45%;
+
+        @include breakpoint(max-md) {
+            right: 0;
+            opacity: 0.2;
+        }
+
+    }
+
+    &-shape3 {
+        position: absolute;
+        height: 135px;
+        width: 135px;
+        background-color: $violet-color;
+        border-radius: 50%;
+        top: 31%;
+        right: 7%;
+        z-index: 9;
+        padding-top: 5px;
+        padding-left: 4px;
+
+        @include breakpoint(max-lg) {
+            top: 51%;
+            right: 56%;
+        }
+
+        @include breakpoint(max-md) {
+          top: 44%;   
+          right: 40%;   
+        }
+
+        .img1 {
+            width: 130px;
+            height: 130px;
+         }
+
+        .img2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    }
+}

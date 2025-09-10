@@ -1,0 +1,130 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+.contact1 {
+    &__map-items {
+        width: 100%;
+        height: 700px;
+        margin-right: -50px;
+
+        @include breakpoint(max-md) {
+            height: 400px;
+         }
+
+         @include breakpoint(max-xxsmall) {
+           height: 300px;
+         }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+
+    &-content {
+        background-color: var(--body);
+        padding: 51px 55px;
+        border-radius: 32px;
+        margin-left: -50px;
+        @include breakpoint(max-xxsmall) {
+           margin-left: 0;
+           padding: 30px 20px;
+         }
+        @include breakpoint(max-lg) {
+            margin-top: 30px;
+        }
+
+        .contact-area {
+            .form-label {
+                color: $black;
+                font-family: $body-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+            }
+
+            .form-control {
+                border-radius: 108px;
+                background: rgba(246, 246, 253, 0.68);
+                border: none;
+                padding: 18px 25px;
+                height: 48px;
+
+                &::placeholder {
+                    color: #8A8A8A;
+                    font-family: $body-font;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+
+            .single-select {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-radius: 108px;
+                background: rgba(246, 246, 253, 0.68);
+                border: none;
+                padding: 8px 25px;
+                height: 48px;
+                color: #8A8A8A;
+                font-family: $body-font;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+            }
+
+            
+        }
+
+        .contact-message{
+            textarea.form-control{
+                border-radius: 22px ;
+                height: 150px;
+                @include breakpoint(max-xxsmall) {
+                    height: 100px;
+                 }
+            }
+            
+        }
+    }
+
+    &__button-wrapper{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @include breakpoint(max-xxsmall) {
+            gap: 16px;
+            flex-wrap: wrap;
+         }
+        .theme-btn{
+            flex-shrink: 0;
+        }
+        .social-link{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            li a{
+                background-color: $bg-color;
+                color: $theme-color;
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 36px;
+                display: inline-block;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}

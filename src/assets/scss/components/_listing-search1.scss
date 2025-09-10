@@ -1,0 +1,69 @@
+@use "../root" as *;
+@use "../utilities" as *;
+
+.listing-search1 {
+  margin-top: 60px;
+  max-width: 1140px;
+  margin: 60px auto 0 auto;
+  position: relative;
+  &-items {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 32px;
+    border-radius: 40px;
+    background-color: $white-color;
+    padding: 80px;
+
+    @include breakpoint(max-xl) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px;
+      gap: 16px;
+    }
+  }
+  &-item {
+    &__title {
+      color: $title-color;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 16px;
+    }
+
+    .single-select {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border-radius: 80px;
+      border: 0.75px solid $black;
+      width: 254px;
+    }
+
+    .theme-btn {
+      background-color: $theme-color;
+      color: $bg-color;
+      gap: 8px;
+
+      i {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__shape1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    img {
+      border-bottom-left-radius: 40px;
+    }
+  }
+  &__shape2 {
+    position: absolute;
+    left: 90px;
+    bottom: 0;
+  }
+}

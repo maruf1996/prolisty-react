@@ -1,0 +1,217 @@
+@use "../../root" as *;
+@use "../../utilities" as *;
+
+.contact6 {
+  &-input {
+    border-radius: 20px;
+    border: 1px solid $border-color;
+    background-color: $white-color;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    position: relative;
+    @include breakpoint(max-lg) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint(max-sm) {
+      padding: 30px 20px;
+    }
+
+    &__title {
+      color: $theme-color;
+      font-family: $title-font;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 64px;
+      text-transform: capitalize;
+      margin-bottom: 36px;
+
+      @include breakpoint(max-sm) {
+        font-size: 48px;
+        line-height: 50px;
+      }
+
+      @include breakpoint(max-xs) {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__form {
+      &-control {
+        width: 100%;
+        border: none;
+        border: 1px solid $border-color;
+        padding: 14px 30px;
+        border-radius: 999px;
+        margin-bottom: 30px;
+
+        &::placeholder {
+          color: $text-color;
+          font-family: $body-font;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 24px;
+
+          @include breakpoint(max-xxsmall) {
+            font-size: 16px;
+            line-height: 28px;
+          }
+        }
+      }
+
+      .nice-select {
+        color: $text-color;
+        font-family: $body-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+      }
+
+      textarea {
+        padding-bottom: 0;
+        height: 100px;
+        border-radius: 20px;
+      }
+    }
+
+    &__btn {
+      display: block;
+      .theme-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &-card {
+    &__item {
+      background-color: $theme-color;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      padding: 30px 30px 40px 40px;
+      @include breakpoint(max-xl) {
+        padding: 24px 16px;
+      }
+
+      &-icon {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: $white-color;
+        font-size: 24px;
+        margin-bottom: 14px;
+      }
+
+      &-text {
+        color: $white-color;
+        font-family: $body-font;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        opacity: 0.8;
+        padding-bottom: 4px;
+      }
+
+      &-link {
+        color: $white-color;
+        font-family: $body-font;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+      }
+    }
+
+    &__item2 {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+      padding: 48px 40px;
+      position: relative;
+      @include breakpoint(max-xxsmall) {
+        padding: 40px 20px;
+      }
+
+      &-icon {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $theme-color;
+        color: $white-color;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      &-text {
+        color: $theme-color;
+        font-family: $body-font;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        padding-bottom: 6px;
+      }
+
+      &-link {
+        color: $theme-color;
+        font-family: $body-font;
+        color: $theme-color;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 38.4px;
+        @include breakpoint(max-xl) {
+          font-size: 28px;
+          line-height: 30px;
+        }
+
+        @include breakpoint(max-xs) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      &-shape {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 180px;
+        width: 180px;
+      }
+    }
+  }
+}
+
+.contact1-content {
+  .contact-area {
+    .single-select {
+      .custom-select__control {
+        padding: 0 !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+      }
+      .custom-select__value-container {
+        padding-left: 0 !important;
+      }
+      .custom-select__placeholder {
+        margin-left: 0 !important;
+      }
+      .custom-select__input-container {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}

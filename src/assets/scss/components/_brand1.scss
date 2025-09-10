@@ -1,0 +1,36 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+
+.brand1 {
+    background-color: $bg-color2;
+    padding: 80px 0;
+
+    @include breakpoint(max-xxsmall) {
+        padding: 40px 0;
+     }
+
+    &-top {
+        &__title {
+            color: $white-color2;
+            font-family: $title-font;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+            padding-bottom: 38px;
+            text-align: center;
+            @include breakpoint(max-xxsmall) {
+               padding-bottom: 28px;
+             }
+        }
+    }
+
+    &-slider__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+    }
+}

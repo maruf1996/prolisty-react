@@ -1,0 +1,31 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+
+.single-widget-tag {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    &__item {
+        background-color: $bg-color;
+        padding: 8px 16px;
+        border-radius: 999px;
+        white-space: nowrap;
+        color: $text-color;
+        font-family: $body-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 26px;
+        transition: 0.4s all ease-in-out;
+        &:hover{
+            background-color: $theme-color;
+            color: $white-color;
+        }
+    }
+    li{
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+
+.single-widget-social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__item{
+        height: 35px;
+        width: 35px;
+        background-color: $bg-color;
+        line-height: 35px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 14px;
+        color: $theme-color;
+        display: inline-block;
+        transition: 0.4s all ease-in-out;
+        &:hover{
+            background-color: $theme-color;
+            color: $white-color;
+        }
+    }
+}

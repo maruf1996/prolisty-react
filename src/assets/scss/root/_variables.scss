@@ -1,0 +1,48 @@
+/*----------------------------------------------
+    # All Variables here
+----------------------------------------------*/
+:root {
+    
+    --theme: #6A72E5;
+    --theme2: #0F183E; 
+    --body: #ffffff;
+    --black: #060505;
+    --white1: #FFFFFF; 
+    --white2: #FAFAFA; 
+    --text: #636363;
+    --title: #041319; 
+    --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+    --border-2: #C5C8F5;
+    --border: #a7a7a7;
+    --bg: #ECEDFC;
+    --bg2:  rgba(151, 71, 255, 0.70);
+    --bg3:  #080F17;
+    --gray1: #383737;   
+    --violet: #9747FF;   
+    --icon-font: "Font Awesome 6 Pro";
+
+    
+}
+
+// Theme Color - Defualt Colors
+$theme-color: var(--theme);
+$theme-color2: var(--theme2);
+$black: var(--black);
+$white-color: var(--white1);
+$white-color2: var(--white2);
+$title-color: var(--title); 
+$text-color: var(--text);
+$bg-color3: var(--bg3); 
+$shadow: var(--box-shadow);
+// Font Variation
+$icon-font : var(--icon-font);
+$border-color-2: var(--border-2);
+$bg-color: var(--bg); 
+$bg-color2: var(--bg2); 
+$violet-color: var(--violet); 
+ 
+$gray-color-1: var(--gray1);
+$border-color: var(--border);
+
+
+

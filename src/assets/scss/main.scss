@@ -1,0 +1,126 @@
+/*-----------------------------------------------------------------
+Theme Name: Prolisty
+Author: codifytheme
+Author URI: https://themeforest.net/user/codifytheme
+Version: 1.0.0 
+Description: Prolisty - Ultimate Business Directory Listing Html Template  
+ 
+-------------------------------------------------------------------
+ CSS TABLE OF CONTENTS
+-------------------------------------------------------------------
+1.Common
+2.Header
+3.Intro
+4.Marquee
+5.About
+6.Service
+7.Location
+8.Listing
+9.Brand
+10.Categories
+11.Price
+12.Testimonial
+13.Contact
+14.Blog  
+15.Cta   
+16.Faq  
+17.Listing Search 
+18.Breadcumb
+19.Login/Register
+20.Widget 
+21.Footer 
+------------------------------------------------------------------*/
+
+//====== Components Start ======//
+
+/* 1.Common */
+@use "./components/common/tab";
+@use "./components/common/contact-info";
+@use "./components/common/contact-form";
+@use "./components/common/contact-map";
+@use "./components/common/pagination";
+@use "./components/common/custom-video-modal";
+@use "./components/common/react-select";
+
+/* 2.Header */
+@use "./components/header1";
+
+/* 3.Intro */
+@use "./components/intro1";
+@use "./components/intro2";
+@use "./components/intro3";
+
+/* 4.Marquee */
+@use "./components/marquee1";
+
+/* 5.About */
+@use "./components/about1";
+@use "./components/about2";
+@use "./components/about3";
+
+/* 6.Service */
+@use "./components/service1";
+
+/* 7.Location */
+@use "./components/location1";
+@use "./components/location2";
+@use "./components/location3";
+
+/* 8.Listing */
+@use "./components/listing1";
+@use "./components/listing2";
+@use "./components/listing-details";
+
+/* 9.Brand */
+@use "./components/brand1";
+
+/* 10.Listing Categories */
+@use "./components/listing-categories1";
+
+/* 11.Listing Price */
+@use "./components/price1";
+
+/* 12.Listing Testimonial */
+@use "./components/testimonial1";
+@use "./components/testimonial2";
+
+/* 13.Contact */
+@use "./components/contact1";
+
+/* 14.Blog */
+@use "./components/blog1";
+@use "./components/blog3";
+@use "./components/blog-details";
+
+/* 15.Cta */
+@use "./components/cta1";
+@use "./components/cta2";
+
+/* 16.Faq */
+@use "./components/faq1";
+
+/* 17.Listing Search */
+@use "./components/listing-search1";
+@use "./components/listing-search2";
+
+/* 18.Breadcumb */
+@use "./components/breadcumb";
+@use "./components/breadcumb2";
+
+/* 19.Login/Register */
+@use "./components/login";
+@use "./components/register";
+
+/* 20.Widget */
+@use "./components/widget/main-widget";
+@use "./components/widget/widget";
+@use "./components/widget/rp-widget";
+@use "./components/widget/search-widgets";
+@use "./components/widget/social-media-widget";
+@use "./components/widget/tags-widget";
+
+/* 21.Footer */
+@use "./components/footer1";
+
+//====== Components End ======//
+//====== Template Section Style End ======//

@@ -1,0 +1,107 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.listing2 {
+    &-card {
+        border-radius: 20px;
+        border: 1px solid #FBD7FF;
+        padding: 24px;
+        margin-bottom: 30px;
+        @include breakpoint(max-xxsmall) {
+          padding: 14px;      
+        }
+
+        &__thumb {
+            border-radius:30px;
+            overflow: hidden;
+            img {
+                width: 100%; 
+                @include transition;
+            }
+        }
+
+        &-content {
+            padding-top: 24px;
+            &__meta {
+                color: $text-color;
+                font-family: $body-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                padding-bottom: 16px;
+                span{
+                    padding-right: 8px;
+                    font-size: 18px;
+                }
+
+                @include breakpoint(max-xxsmall) {
+                padding-bottom: 10px;
+                }
+            }
+
+            &__location {
+                color: $black;
+                font-family: $title-font;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+
+            &__bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 17px;
+                @include breakpoint(max-xxsmall) {
+                padding-top: 10px;
+                }
+
+                &-listing {
+                    color: $text-color;
+                    font-family: $body-font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+
+                .theme-btn {
+                    height: 34px;
+                    width: 34px;
+                    padding: 10px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 34px;
+                    text-align: center;
+                    padding-right: 16px;
+                }
+            }
+        }
+
+        &:hover {
+            .listing2 { 
+                &-card { 
+                    &__thumb { 
+                        img { 
+                            transform: scale(1.1);
+                        } 
+                    } 
+                 }
+            }
+        }
+    }
+
+    &-btn-wrapper{
+        .theme-btn{
+            gap: 8px;
+        }
+    }
+}

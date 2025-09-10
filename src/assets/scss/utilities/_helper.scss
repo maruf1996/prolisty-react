@@ -1,0 +1,300 @@
+@use "../root" as *;
+
+/*----------------------------------------------
+    # Helping  style here
+----------------------------------------------*/
+//page scroll bar add
+::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $theme-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $theme-color;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+//page scroll bar add
+
+//Basic Code Start
+.fix {
+  overflow: hidden;
+}
+
+.ralt {
+  position: relative;
+}
+
+//Basic Code End
+
+//Video Css Start
+.ripple {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    -webkit-animation: rippleOne 3s infinite;
+    animation: rippleOne 3s infinite;
+  }
+
+  &::before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &::after {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//Video Css End
+
+// Spacing
+
+// ==============
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+
+  @include breakpoint(max-md) {
+    margin-top: 30px;
+  }
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+
+  @include breakpoint(max-md) {
+    margin-bottom: 30px;
+  }
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.ps40 {
+  padding-left: 40px;
+}
+
+.pt-80 {
+  padding-top: 80px !important;
+}
+
+.pt-110 {
+  padding-top: 110px !important;
+}
+
+.pt-160 {
+  padding-top: 160px !important;
+}
+
+// ==============
+.section-padding {
+  padding: 80px 0px;
+
+  @include breakpoint(lg) {
+    padding: 120px 0px;
+  }
+}
+
+// Color
+.bg-color1 {
+  background-color: $bg-color;
+}
+.bg-color2 {
+  background-color: $bg-color2;
+}
+.bg-color3 {
+  background-color: $bg-color3;
+}
+
+.bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-title {
+  &__subtitle {
+    color: $title-color;
+    font-family: $body-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 16px;
+    position: relative;
+    padding: 8px 16px;
+    background-color: rgba(106, 114, 229, 0.08);
+    border-radius: 20px;
+    display: inline-block;
+    .shape {
+      position: absolute;
+      right: -22px;
+      top: -26px;
+    }
+  }
+
+  &__title {
+    color: $title-color;
+    font-family: $title-font;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include breakpoint(max-sm) {
+      font-size: 32px;
+      br {
+        display: none;
+      }
+    }
+    @include breakpoint(max-xxsmall) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    padding-top: 24px;
+    color: $text-color;
+    font-family: $body-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: $theme-color;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+
+  @include breakpoint(max-xxsmall) {
+    margin-top: 0;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    text-decoration: none;
+    border-radius: 999px;
+    background: $bg-color;
+    width: 60px;
+    height: 60px;
+    color: $title-color;
+    font-family: $title-font;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.64px;
+
+    @include breakpoint(max-xxsmall) {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    i {
+      color: $theme-color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+
+    &.active {
+      background: $theme-color;
+      color: $white-color2;
+    }
+
+    &:hover {
+      background: $theme-color;
+      color: $white-color2 !important;
+
+      i {
+        color: $white-color2 !important;
+      }
+    }
+  }
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-mask {
+  mask-size: cover;
+  mask-position: center;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

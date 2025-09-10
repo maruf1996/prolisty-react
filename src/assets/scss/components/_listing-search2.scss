@@ -1,0 +1,54 @@
+@use "../root" as *;
+@use "../utilities" as *;
+
+.listing-search2 {
+  margin-bottom: -90px;
+  margin-top: -90px;
+  @include breakpoint(max-xl) {
+    margin-top: 0;
+  }
+  &-items {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 32px;
+    border-radius: 40px;
+    background-color: $theme-color;
+    padding: 40px 80px;
+
+    @include breakpoint(max-xl) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &-item {
+    &__title {
+      color: $white-color2;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 16px;
+    }
+
+    .single-select {
+      display: flex;
+      align-items: center;
+      padding: 15px 24px;
+      border-radius: 80px;
+      border: 0.75px solid $white-color2;
+      width: 254px;
+    }
+
+    .theme-btn {
+      background-color: $white-color2;
+      color: #080f17;
+      gap: 8px;
+
+      i {
+        margin-left: 0;
+      }
+    }
+  }
+}

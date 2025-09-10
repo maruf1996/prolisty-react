@@ -1,0 +1,162 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+
+.listing1 {
+    background: #F6F6FD;
+    .swiper-arrow{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 12px;
+        @include breakpoint(max-md) {
+            display: none;
+        }
+        .swiper-nav {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            border: 1.5px solid $border-color;
+            color: $text-color;
+            font-size: 17px;
+            text-align: center;
+            line-height: 45px;
+            transition: 0.3s all ease-in-out;
+            &:hover{
+                background-color: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+    &-card {
+        overflow: hidden;
+        &__thumb { 
+            position: relative;
+            overflow: hidden;
+            border-radius:30px 30px 0 0;
+
+            img {
+                width: 100%;
+                transition: all 0.4s;
+            }
+
+            .badge {
+                border-radius: 6px;
+                background: #ECEDFC;
+                position: absolute;
+                left: 30px;
+                top: 30px;
+                color: $gray-color-1;
+                font-family: $body-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+
+                span {
+                    padding-left: 6px;
+                }
+            }
+
+            .wishlist {
+                display: flex;
+                width: 35px;
+                height: 35px;
+                padding-top: 4px;
+                border-radius: 50%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                background-color: #ECEDFC;
+                color: #9747FF;
+                font-size: 20px;
+                line-height: 35px;
+            }
+        }
+
+        &-content {
+            padding: 24px;
+            background-color: $white-color;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0px 2px 8px 0px rgba(134, 134, 134, 0.10);
+
+            &__meta {
+                color: $text-color;
+                font-family: $body-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                padding-bottom: 16px;
+                span{
+                    font-size: 16px;
+                    padding-right: 10px;
+                }
+            }
+
+            &__title {
+                color: $black;
+                font-family: $title-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+                padding-bottom: 24px;
+                &:hover {
+                    color: $theme-color; 
+                }
+            }
+        }
+
+        &-feature {
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include breakpoint(max-xxsmall) {
+                    flex-wrap: wrap;
+                    gap: 6px;
+                 }
+
+                li {
+                    color: $text-color;
+                    font-family: $body-font;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+
+                    .svg {
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+            &__price {
+                padding-top: 30px;
+                color: $black;
+                font-family: $title-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+            }
+        }
+
+        &:hover {
+            .listing1 { 
+                &-card { 
+                    &__thumb { 
+                        img { 
+                            transform: scale(1.1);
+                        } 
+                    } 
+                 }
+            }
+        }
+    }
+}
