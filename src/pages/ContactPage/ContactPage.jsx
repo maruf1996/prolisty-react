@@ -57,10 +57,7 @@ const ContactPage = () => {
         <div className="container">
           <div className="row d-flex justify-content-end">
             <div className="col-lg-6">
-              <div
-                className="contact6-input img-custom-anim-left wow fadeInleft"
-                data-wow-delay="0.3s"
-              >
+              <div className="contact6-input img-custom-anim-left">
                 <h4 className="contact6-input__title">Get In Touch</h4>
                 <form
                   action="contact.php"

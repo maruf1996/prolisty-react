@@ -12,10 +12,7 @@ const FaqPage = () => {
             <div className="col-lg-6">
               <div className="faq1-card">
                 <div className="accordion" id="accordionExample">
-                  <div
-                    className="global-accordion-item wow fadeInUp"
-                    data-wow-delay=".2s"
-                  >
+                  <div className="global-accordion-item">
                     <div className="global-accordion-header">
                       <div
                         className="global-accordion-button"
@@ -52,10 +49,7 @@ const FaqPage = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="global-accordion-item wow fadeInUp"
-                    data-wow-delay=".4s"
-                  >
+                  <div className="global-accordion-item">
                     <div className="global-accordion-header">
                       <div
                         className="global-accordion-button collapsed"
@@ -92,10 +86,7 @@ const FaqPage = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="global-accordion-item wow fadeInUp mb-0"
-                    data-wow-delay=".6s"
-                  >
+                  <div className="global-accordion-item mb-0">
                     <div className="global-accordion-header">
                       <div
                         className="global-accordion-button collapsed"
@@ -133,12 +124,8 @@ const FaqPage = () => {
                 </div>
               </div>
             </div>
-
             <div className="col-lg-6">
-              <div
-                className="faq1-thumb wow img-custom-anim-right"
-                data-wow-delay="0.4s"
-              >
+              <div className="faq1-thumb img-custom-anim-right">
                 <img src={faqImg} alt="thumb" />
               </div>
             </div>

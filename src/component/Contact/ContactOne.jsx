@@ -42,10 +42,7 @@ const ContactOne = () => {
 
           {/* Contact Form */}
           <div className="col-lg-6">
-            <div
-              className="contact1-content img-custom-anim-right wow"
-              data-wow-delay="0.4s"
-            >
+            <div className="contact1-content img-custom-anim-right">
               <form
                 id="contact-form"
                 method="POST"
@@ -53,7 +50,7 @@ const ContactOne = () => {
               >
                 <div className="row g-4">
                   {/* Full Name */}
-                  <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                  <div className="col-lg-6">
                     <div className="contact-area form-group">
                       <label htmlFor="fullName" className="form-label">
                         Full name
@@ -68,7 +65,7 @@ const ContactOne = () => {
                   </div>
 
                   {/* Email */}
-                  <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                  <div className="col-lg-6">
                     <div className="contact-area form-group">
                       <label htmlFor="email" className="form-label">
                         Email address
@@ -83,7 +80,7 @@ const ContactOne = () => {
                   </div>
 
                   {/* Phone */}
-                  <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                  <div className="col-lg-6 ">
                     <div className="contact-area form-group">
                       <label htmlFor="phone" className="form-label">
                         Phone number
@@ -98,7 +95,7 @@ const ContactOne = () => {
                   </div>
 
                   {/* Location */}
-                  <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                  <div className="col-lg-6">
                     <div className="contact-area form-group">
                       <label htmlFor="location" className="form-label">
                         Location
@@ -115,7 +112,7 @@ const ContactOne = () => {
                   </div>
 
                   {/* Message */}
-                  <div className="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                  <div className="col-lg-12">
                     <div className="contact-area contact-message form-group">
                       <label htmlFor="message" className="form-label">
                         Your message
@@ -130,7 +127,7 @@ const ContactOne = () => {
                   </div>
 
                   {/* Button + Social */}
-                  <div className="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
+                  <div className="col-lg-7">
                     <div className="contact1__button-wrapper">
                       <button type="submit" className="theme-btn style1">
                         Get Started

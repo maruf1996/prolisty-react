@@ -16,10 +16,9 @@ const BlogPage = () => {
             <div className="col-xl-8">
               {blogPageData?.map((blog, index) => (
                 <div
-                  className={`blog3-card wow fadeInUp ${
+                  className={`blog3-card ${
                     index !== blogPageData?.length - 1 ? "mb-80" : ""
                   }`}
-                  data-wow-delay="0.3s"
                   key={index}
                 >
                   <div className="blog3-card__thumb">

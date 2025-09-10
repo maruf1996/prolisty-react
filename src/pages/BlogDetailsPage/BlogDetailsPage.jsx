@@ -48,10 +48,7 @@ const BlogDetailsPage = () => {
                 </p>
 
                 {/* Blog list */}
-                <div
-                  className="blog-details-list-wrapper wow fadeInUp"
-                  data-wow-delay="0.6s"
-                >
+                <div className="blog-details-list-wrapper">
                   <ul className="blog-details__list">
                     <li>
                       <span>
@@ -112,18 +109,12 @@ const BlogDetailsPage = () => {
               {/* Two side images */}
               <div className="row">
                 <div className="col-md-6">
-                  <div
-                    className="blog-details__thumb hover-img mt-2 wow img-custom-anim-left"
-                    data-wow-delay="0.6s"
-                  >
+                  <div className="blog-details__thumb hover-img mt-2">
                     <img src={blogThumb2} alt="thumb" />
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div
-                    className="blog-details__thumb hover-img mt-2 wow img-custom-anim-right"
-                    data-wow-delay="0.6s"
-                  >
+                  <div className="blog-details__thumb hover-img mt-2">
                     <img src={blogThumb3} alt="thumb" />
                   </div>
                 </div>
@@ -172,10 +163,7 @@ const BlogDetailsPage = () => {
               </div>
 
               {/* Prev / Next Buttons */}
-              <div
-                className="blog-details-button wow fadeInUp"
-                data-wow-delay="0.5s"
-              >
+              <div className="blog-details-button">
                 <button className="blog-details-button__arry-prev">
                   <i className="fa-sharp-duotone fa-regular fa-arrow-left"></i>
                   <span className="ps-3">Previous</span>

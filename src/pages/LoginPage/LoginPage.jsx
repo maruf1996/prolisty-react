@@ -27,10 +27,7 @@ const LoginPage = () => {
                       className="contact-form-items"
                     >
                       <div className="row g-4">
-                        <div
-                          className="col-lg-12 wow fadeInUp"
-                          data-wow-delay=".5s"
-                        >
+                        <div className="col-lg-12">
                           <div className="form-clt">
                             <span>Email address*</span>
                             <input
@@ -42,10 +39,7 @@ const LoginPage = () => {
                           </div>
                         </div>
 
-                        <div
-                          className="col-lg-12 wow fadeInUp"
-                          data-wow-delay=".7s"
-                        >
+                        <div className="col-lg-12">
                           <div className="form-clt">
                             <span>Password*</span>
                             <input
@@ -71,10 +65,7 @@ const LoginPage = () => {
                           </label>
                         </div>
 
-                        <div
-                          className="col-lg-12 wow fadeInUp"
-                          data-wow-delay=".9s"
-                        >
+                        <div className="col-lg-12">
                           <button type="submit" className="theme-btn style1">
                             Sign In
                           </button>

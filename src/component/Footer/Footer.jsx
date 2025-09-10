@@ -19,10 +19,7 @@ const Footer = ({ title }) => {
         <div className="container">
           <div className="row justify-content-between">
             {/* Logo & Contact */}
-            <div
-              className="col-xl-4 col-lg-8 col-md-12 wow fadeInUp"
-              data-wow-delay=".7s"
-            >
+            <div className="col-xl-4 col-lg-8 col-md-12">
               <div className="footer1-widget__item">
                 <div className="footer1-widget__item-logo">
                   <img src={logoWhite} alt="logo" />
@@ -86,10 +83,7 @@ const Footer = ({ title }) => {
             </div>
 
             {/* Categories */}
-            <div
-              className="col-xxl-auto col-xl-3 col-lg-4 col-md-5 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
+            <div className="col-xxl-auto col-xl-3 col-lg-4 col-md-5">
               <div className="footer1-widget__item">
                 <h3 className="footer1-widget__item-title">Categories</h3>
                 <ul className="footer1-widget__item-list">
@@ -115,10 +109,7 @@ const Footer = ({ title }) => {
             </div>
 
             {/* Location */}
-            <div
-              className="col-xxl-auto col-xl-3 col-lg-4 col-md-5 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
+            <div className="col-xxl-auto col-xl-3 col-lg-4 col-md-5">
               <div className="footer1-widget__item footer1-widget__item-2">
                 <h3 className="footer1-widget__item-title">Location</h3>
                 <ul className="footer1-widget__item-list">
@@ -144,10 +135,7 @@ const Footer = ({ title }) => {
             </div>
 
             {/* Footer Menu */}
-            <div
-              className="col-xxl-auto col-xl-3 col-lg-4 col-md-5 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
+            <div className="col-xxl-auto col-xl-3 col-lg-4 col-md-5">
               <div className="footer1-widget__item">
                 <h3 className="footer1-widget__item-title">Footer Menu</h3>
                 <ul className="footer1-widget__item-list">
@@ -174,7 +162,7 @@ const Footer = ({ title }) => {
           </div>
 
           {/* Footer Bottom */}
-          <div className="footer1-bottom wow fadeInUp" data-wow-delay="0.5s">
+          <div className="footer1-bottom ">
             <div className="container">
               <div className="footer1-bottom-item d-flex align-items-center justify-content-between">
                 <p className="footer1-bottom-item__text">
