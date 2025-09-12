@@ -23,7 +23,7 @@ const Header = () => {
   // Sticky effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 20) {
         setIsSticky(true);
       } else {
         setIsSticky(false);

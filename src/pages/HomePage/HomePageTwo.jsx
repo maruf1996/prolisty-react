@@ -24,7 +24,7 @@ const HomePageTwo = () => {
       <TestimonialOne />
       <ContactOne />
       <BlogOne />
-      <CtaOne />
+      <CtaOne title="home-two" />
     </>
   );
 };

@@ -6,7 +6,9 @@ const CtaOne = ({ title }) => {
     <div className="cta1">
       <div className="container">
         <div
-          className={`cta1-card ${title === "home-one" ? "mb-80 mt-0" : ""}`}
+          className={`cta1-card
+          ${title === "home-one" ? "mb-80 mt-0" : ""}
+          ${title === "home-two" ? "m-mt-60" : ""}`}
           style={{ backgroundImage: `url(${ctaBg})` }}
         >
           <div className="cta1-card-left">

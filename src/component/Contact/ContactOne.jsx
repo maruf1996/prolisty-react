@@ -107,6 +107,7 @@ const ContactOne = () => {
                         onChange={setLocation}
                         classNamePrefix="custom-select"
                         className="single-select"
+                        isSearchable={false}
                       />
                     </div>
                   </div>
