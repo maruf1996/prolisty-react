@@ -5,7 +5,7 @@ import RegisterImg from "/images/register/register.jpg";
 const RegisterPage = () => {
   return (
     <div>
-      <Breadcumb title="Register"></Breadcumb>
+      <Breadcumb title="Register" />
       <section className="register-section fix section-padding">
         <div className="container">
           <div className="register-wrapper">

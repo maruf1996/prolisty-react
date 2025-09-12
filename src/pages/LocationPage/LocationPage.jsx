@@ -6,9 +6,9 @@ import TestimonialOne from "../../component/Testimonial/TestimonialOne";
 const LocationPage = () => {
   return (
     <>
-      <Breadcumb title="Locations"></Breadcumb>
-      <LocationTwo></LocationTwo>
-      <TestimonialOne></TestimonialOne>
+      <Breadcumb title="Locations" />
+      <LocationTwo />
+      <TestimonialOne />
     </>
   );
 };

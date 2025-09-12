@@ -7,7 +7,7 @@ import ForgetPassImg from "/images/forget-password/forget-pass.jpg";
 const ForgetPage = () => {
   return (
     <div>
-      <Breadcumb title="Forget Password"></Breadcumb>
+      <Breadcumb title="Forget Password" />
       <section className="forget-password-section fix section-padding">
         <div className="container">
           <div className="login-wrapper">

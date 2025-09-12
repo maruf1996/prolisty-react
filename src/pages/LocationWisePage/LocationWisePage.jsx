@@ -7,7 +7,7 @@ import Pagination from "../../component/Pagination/Pagination";
 const LocationWisePage = () => {
   return (
     <div>
-      <Breadcumb title="Location Wise Listings"></Breadcumb>
+      <Breadcumb title="Location Wise Listings" />
       <section className="location-wise section-padding fix">
         <div className="container">
           <div className="row g-30">
@@ -58,7 +58,7 @@ const LocationWisePage = () => {
               </div>
             ))}
             {/* Pagination */}
-            <Pagination title="extra-class"></Pagination>
+            <Pagination title="extra-class" />
           </div>
         </div>
       </section>

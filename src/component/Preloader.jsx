@@ -5,14 +5,17 @@ const Preloader = () => {
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => {
-        setLoaded(true);
-      }, 600);
+      setTimeout(() => setLoaded(true), 600);
     };
 
     window.addEventListener("load", handleLoad);
 
-    return () => window.removeEventListener("load", handleLoad);
+    const fallback = setTimeout(() => setLoaded(true), 3000);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (

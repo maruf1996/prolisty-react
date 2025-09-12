@@ -7,7 +7,7 @@ import appleIcon from "/images/icon/appleIcon.png";
 const LoginPage = () => {
   return (
     <div>
-      <Breadcumb title="Login"></Breadcumb>
+      <Breadcumb title="Login" />
       <section className="login-section fix section-padding">
         <div className="container">
           <div className="login-wrapper">

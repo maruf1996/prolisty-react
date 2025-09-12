@@ -9,7 +9,7 @@ import Breadcumb from "../../component/Breadcumb/Breadcumb";
 const BlogDetailsPage = () => {
   return (
     <div>
-      <Breadcumb title="Blog Details"></Breadcumb>
+      <Breadcumb title="Blog Details" />
       <section className="blog-details section-padding fix">
         <div className="container">
           <div className="row gy-5 justify-content-center">
@@ -257,7 +257,7 @@ const BlogDetailsPage = () => {
             </div>
             {/* Sidebar */}
             <div className="col-xl-4 col-lg-10">
-              <BlogSidebar></BlogSidebar>
+              <BlogSidebar />
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import faqImg from "/images/faq/faq-thumb1.jpg";
 const FaqPage = () => {
   return (
     <div>
-      <Breadcumb title="faq"></Breadcumb>
+      <Breadcumb title="faq" />
       <div className="faq1 fix section-padding">
         <div className="container">
           <div className="row gx-60 align-items-center">

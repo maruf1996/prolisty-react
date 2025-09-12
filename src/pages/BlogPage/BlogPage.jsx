@@ -8,7 +8,7 @@ import { blogPageData } from "../../data/site";
 const BlogPage = () => {
   return (
     <div>
-      <Breadcumb title="Blog"></Breadcumb>
+      <Breadcumb title="Blog" />
       <div className="blog-standard section-padding fix">
         <div className="container">
           <div className="row gy-5 justify-content-center">
@@ -49,11 +49,11 @@ const BlogPage = () => {
                 </div>
               ))}
               {/* Pagination */}
-              <Pagination></Pagination>
+              <Pagination />
             </div>
             {/* Blog Sidebar  */}
             <div className="col-xl-4 col-lg-10">
-              <BlogSidebar></BlogSidebar>
+              <BlogSidebar />
             </div>
           </div>
         </div>

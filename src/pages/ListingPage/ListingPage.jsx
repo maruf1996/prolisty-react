@@ -18,7 +18,7 @@ const ListingPage = () => {
   const [sort, setSort] = useState(null);
   return (
     <>
-      <Breadcumb title="Listings"></Breadcumb>
+      <Breadcumb title="Listings" />
       <section className="listings-page section-padding fix">
         <div className="container">
           <div className="row">
@@ -213,7 +213,7 @@ const ListingPage = () => {
                     </div>
                   ))}
                   {/* Pagination */}
-                  <Pagination></Pagination>
+                  <Pagination />
                 </div>
               </div>
             </div>

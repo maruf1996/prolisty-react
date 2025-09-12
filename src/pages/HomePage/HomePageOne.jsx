@@ -13,16 +13,16 @@ import LocationOne from "../../component/Location/LocationOne";
 const HomePageOne = () => {
   return (
     <>
-      <IntroTwo></IntroTwo>
-      <ListingSearchTwo></ListingSearchTwo>
-      <ListingOne></ListingOne>
-      <AboutTwo></AboutTwo>
-      <MarqueeOne></MarqueeOne>
-      <ServiceOne></ServiceOne>
-      <LocationOne></LocationOne>
-      <PriceOne></PriceOne>
-      <ContactOne></ContactOne>
-      <BlogOne></BlogOne>
+      <IntroTwo />
+      <ListingSearchTwo />
+      <ListingOne />
+      <AboutTwo />
+      <MarqueeOne />
+      <ServiceOne />
+      <LocationOne />
+      <PriceOne />
+      <ContactOne />
+      <BlogOne />
     </>
   );
 };

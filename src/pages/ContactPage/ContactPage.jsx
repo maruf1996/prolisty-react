@@ -4,7 +4,7 @@ import Breadcumb from "../../component/Breadcumb/Breadcumb";
 const ContactPage = () => {
   return (
     <div>
-      <Breadcumb title="Contact"></Breadcumb>
+      <Breadcumb title="Contact" />
       {/* Contact Info */}
       <div className="contact-info section-padding">
         <div className="container">

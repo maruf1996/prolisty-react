@@ -4,7 +4,7 @@ import Breadcumb from "../../component/Breadcumb/Breadcumb";
 const TermsPage = () => {
   return (
     <div>
-      <Breadcumb title="Terms and Conditions"></Breadcumb>
+      <Breadcumb title="Terms and Conditions" />
       <section className="terms section-padding">
         <div className="container">
           <div className="row">

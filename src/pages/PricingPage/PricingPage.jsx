@@ -6,9 +6,9 @@ import TestimonialOne from "../../component/Testimonial/TestimonialOne";
 const PricingPage = () => {
   return (
     <>
-      <Breadcumb title="Pricing"></Breadcumb>
-      <PriceOne></PriceOne>
-      <TestimonialOne></TestimonialOne>
+      <Breadcumb title="Pricing" />
+      <PriceOne />
+      <TestimonialOne />
     </>
   );
 };

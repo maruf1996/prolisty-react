@@ -4,7 +4,7 @@ import Breadcumb from "../../component/Breadcumb/Breadcumb";
 const PrivacyPage = () => {
   return (
     <div>
-      <Breadcumb title="Privacy Policy"></Breadcumb>
+      <Breadcumb title="Privacy Policy" />
       <section className="terms section-padding">
         <div className="container">
           <div className="row">

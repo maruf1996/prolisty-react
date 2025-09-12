@@ -9,12 +9,12 @@ import TestimonialOne from "../../component/Testimonial/TestimonialOne";
 const AboutPage = () => {
   return (
     <>
-      <Breadcumb title="About Us"></Breadcumb>
-      <AboutTwo></AboutTwo>
-      <MarqueeOne></MarqueeOne>
-      <ServiceOne></ServiceOne>
-      <PriceOne></PriceOne>
-      <TestimonialOne></TestimonialOne>
+      <Breadcumb title="About Us" />
+      <AboutTwo />
+      <MarqueeOne />
+      <ServiceOne />
+      <PriceOne />
+      <TestimonialOne />
     </>
   );
 };

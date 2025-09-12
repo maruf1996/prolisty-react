@@ -21,13 +21,10 @@ const ListingDetailsPage = () => {
   return (
     <>
       {/* Send Message Modal */}
-      <ModalForm
-        title="Send Message"
-        dataTarget="send_message_modal"
-      ></ModalForm>
+      <ModalForm title="Send Message" dataTarget="send_message_modal" />
 
       {/* Report Modal */}
-      <ModalForm title="Submit Report" dataTarget="report_modal"></ModalForm>
+      <ModalForm title="Submit Report" dataTarget="report_modal" />
 
       {/* Breadcrumb Section */}
       <div

@@ -11,14 +11,14 @@ import MarqueeOne from "../../component/Marquee/MarqueeOne";
 const HomePageThree = () => {
   return (
     <>
-      <IntroThree></IntroThree>
-      <AboutThree></AboutThree>
-      <LocationThree></LocationThree>
-      <ListingTwo></ListingTwo>
-      <TestimonialTwo></TestimonialTwo>
-      <CtaTwo></CtaTwo>
-      <BlogOne></BlogOne>
-      <MarqueeOne></MarqueeOne>
+      <IntroThree />
+      <AboutThree />
+      <LocationThree />
+      <ListingTwo />
+      <TestimonialTwo />
+      <CtaTwo />
+      <BlogOne />
+      <MarqueeOne />
     </>
   );
 };

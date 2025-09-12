@@ -14,17 +14,17 @@ import LocationTwo from "../../component/Location/LocationTwo";
 const HomePageTwo = () => {
   return (
     <>
-      <IntroOne></IntroOne>
-      <MarqueeOne></MarqueeOne>
-      <AboutOne></AboutOne>
-      <LocationTwo></LocationTwo>
-      <ListingCategoriesOne></ListingCategoriesOne>
-      <BrandOne></BrandOne>
-      <PriceOne></PriceOne>
-      <TestimonialOne></TestimonialOne>
-      <ContactOne></ContactOne>
-      <BlogOne></BlogOne>
-      <CtaOne></CtaOne>
+      <IntroOne />
+      <MarqueeOne />
+      <AboutOne />
+      <LocationTwo />
+      <ListingCategoriesOne />
+      <BrandOne />
+      <PriceOne />
+      <TestimonialOne />
+      <ContactOne />
+      <BlogOne />
+      <CtaOne />
     </>
   );
 };
