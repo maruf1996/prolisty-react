@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import ctaThumb1 from "/images/cta/cta-thumb2_1.jpg";
 import ctaThumb2 from "/images/cta/cta-thumb2_2.jpg";
@@ -9,6 +9,8 @@ import VideoModal from "../../hooks/VideoModal";
 
 const CtaTwo = () => {
   const [videoActive, setVideoActive] = useState(false);
+
+  const handleVideoOpen = useCallback(() => setVideoActive(true), []);
 
   return (
     <section className="cta2 section-padding fix">
@@ -36,18 +38,18 @@ const CtaTwo = () => {
             <div className="col-xl-5">
               <div className="cta2-card-thumb">
                 <div className="cta2-card-thumb__thumb1">
-                  <img src={ctaThumb1} alt="thumb" />
+                  <img src={ctaThumb1} alt="thumb" loading="lazy" />
                 </div>
                 <div className="cta2-card-thumb__thumb2">
-                  <img src={ctaThumb2} alt="thumb" />
+                  <img src={ctaThumb2} alt="thumb" loading="lazy" />
                 </div>
                 <div className="cta2-card-shape3">
-                  <img src={ctaShape3} alt="Shape" />
+                  <img src={ctaShape3} alt="Shape" loading="lazy" />
                 </div>
 
                 <div className="cta2-card-thumb-video">
                   <button
-                    onClick={() => setVideoActive(true)}
+                    onClick={handleVideoOpen}
                     className="cta2-card-thumb-video-btn ripple popup-video"
                   >
                     <i className="fa-solid fa-play"></i>
@@ -59,10 +61,10 @@ const CtaTwo = () => {
 
           {/* Shapes */}
           <div className="cta2-card__shape1">
-            <img src={ctaShape1} alt="Shape" />
+            <img src={ctaShape1} alt="Shape" loading="lazy" />
           </div>
           <div className="cta2-card__shape2">
-            <img src={ctaShape2} alt="Shape" />
+            <img src={ctaShape2} alt="Shape" loading="lazy" />
           </div>
         </div>
       </div>

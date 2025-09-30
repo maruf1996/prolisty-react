@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Thumbs, Navigation } from "swiper/modules";
 import shape1 from "/images/intro/intro-shape1_1.png";
@@ -53,10 +53,10 @@ const IntroTwo = () => {
                 modules={[FreeMode, Thumbs]}
                 className="intro-thumb-slider slider-nav-area"
               >
-                {introThumbData?.map((thumb, idx) => (
-                  <SwiperSlide key={idx}>
-                    <img src={thumb?.img} alt={thumb?._id} />
-                    <span>{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</span>
+                {introThumbData?.map((thumb) => (
+                  <SwiperSlide key={thumb?._id}>
+                    <img src={thumb?.img} alt={thumb?._id} loading="lazy" />
+                    <span>0{thumb?._id}</span>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -90,9 +90,9 @@ const IntroTwo = () => {
               }}
               className="intro-slider"
             >
-              {introThumbData?.map((thumb, idx) => (
-                <SwiperSlide key={idx}>
-                  <img src={introThumbBig} alt={thumb?._id} />
+              {introThumbData?.map((thumb) => (
+                <SwiperSlide key={thumb?._id}>
+                  <img src={introThumbBig} alt={thumb?._id} loading="lazy" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -101,15 +101,20 @@ const IntroTwo = () => {
 
         {/* Shapes */}
         <div className="intro2-shape1">
-          <img src={shape1} alt="shape" />
+          <img src={shape1} alt="shape" loading="lazy" />
         </div>
         <div className="intro2-shape2">
-          <img src={shape2} alt="shape" />
+          <img src={shape2} alt="shape" loading="lazy" />
         </div>
         <div className="intro2-shape3">
           <div className="position-relative">
-            <img className="img1 cir36" src={circleShape} alt="shape" />
-            <img className="img2" src={arrowShape} alt="arrow" />
+            <img
+              className="img1 cir36"
+              src={circleShape}
+              alt="shape"
+              loading="lazy"
+            />
+            <img className="img2" src={arrowShape} alt="arrow" loading="lazy" />
           </div>
         </div>
       </div>

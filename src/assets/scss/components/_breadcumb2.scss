@@ -4,6 +4,7 @@
 .breadcrumb-wrapper {
   padding: 120px 0;
   position: relative;
+  background-image: url("/images/intro/common-intro-bg1_1.jpg");
   @include breakpoint(max-xxsmall) {
     padding: 80px 0;
   }

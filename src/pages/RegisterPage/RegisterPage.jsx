@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 import RegisterImg from "/images/register/register.jpg";
 
@@ -88,7 +87,7 @@ const RegisterPage = () => {
 
               <div className="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
                 <div className="register-thumb">
-                  <img src={RegisterImg} alt="register-thumb" />
+                  <img src={RegisterImg} alt="register-thumb" loading="lazy" />
                 </div>
               </div>
             </div>

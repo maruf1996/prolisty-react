@@ -1,4 +1,3 @@
-import React from "react";
 import MarqueeOne from "../../component/Marquee/MarqueeOne";
 import ServiceOne from "../../component/Service/ServiceOne";
 import PriceOne from "../../component/Price/PriceOne";

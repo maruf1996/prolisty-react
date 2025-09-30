@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FeatureOneData } from "../../data/site";
@@ -23,7 +23,7 @@ const ListingOne = () => {
               <h6 className="section-title__subtitle">
                 Luxury Feature
                 <span className="shape">
-                  <img src={shape} alt="shape" />
+                  <img src={shape} alt="shape" loading="lazy" />
                 </span>
               </h6>
               <h2 className="section-title__title">
@@ -73,10 +73,10 @@ const ListingOne = () => {
           className="listing1-slider"
         >
           {FeatureOneData?.map((slide) => (
-            <SwiperSlide key={slide.id}>
+            <SwiperSlide key={slide?._id}>
               <div className="listing1-card pb-4">
                 <div className="listing1-card__thumb">
-                  <img src={slide.thumb} alt="thumb" />
+                  <img src={slide?.thumb} alt="thumb" loading="lazy" />
                   <div className="badge">
                     Recently Added{" "}
                     <span>
@@ -93,33 +93,48 @@ const ListingOne = () => {
                     <span>
                       <i className="fa-sharp fa-light fa-location-dot"></i>
                     </span>{" "}
-                    {slide.location}
+                    {slide?.location}
                   </h6>
                   <h3>
                     <Link
                       to={`/listing-details/${slide?.slug}`}
                       className="listing1-card-content__title"
                     >
-                      {slide.title}
+                      {slide?.title}
                     </Link>
                   </h3>
                   <div className="listing1-card-feature">
                     <ul className="listing1-card-feature__list">
                       <li>
-                        <img className="svg" src={icons.beds} alt="icon" /> Beds
-                        : {slide.beds}
+                        <img
+                          className="svg"
+                          src={icons?.beds}
+                          alt="icon"
+                          loading="lazy"
+                        />{" "}
+                        Beds : {slide.beds}
                       </li>
                       <li>
-                        <img className="svg" src={icons.baths} alt="icon" />{" "}
+                        <img
+                          className="svg"
+                          src={icons?.baths}
+                          alt="icon"
+                          loading="lazy"
+                        />{" "}
                         Baths : {slide.baths}
                       </li>
                       <li>
-                        <img className="svg" src={icons.sqft} alt="icon" /> Sqft
-                        : {slide.sqft}
+                        <img
+                          className="svg"
+                          src={icons?.sqft}
+                          alt="icon"
+                          loading="lazy"
+                        />{" "}
+                        Sqft : {slide?.sqft}
                       </li>
                     </ul>
                     <p className="listing1-card-feature__price">
-                      {slide.price}
+                      {slide?.price}
                     </p>
                   </div>
                 </div>

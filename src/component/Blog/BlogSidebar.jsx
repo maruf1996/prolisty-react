@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { sidebarCategories } from "../../data/site";
 import { recentPosts } from "../../data/site";
@@ -24,8 +23,8 @@ const BlogSidebar = () => {
         <div className="single-sidebar-widget mb-60">
           <h3 className="single-sidebar-widget__title">Category</h3>
           <ul className="single-sidebar-widget-list__item">
-            {sidebarCategories?.map((cat, i) => (
-              <li key={i}>
+            {sidebarCategories?.map((cat) => (
+              <li key={cat?._id}>
                 <Link to="#!">
                   <i className="fa-light fa-arrow-right"></i> {cat.name}
                 </Link>{" "}
@@ -38,10 +37,10 @@ const BlogSidebar = () => {
         {/* Recent Posts */}
         <div className="single-sidebar-widget rp-widget mb-60">
           <h3 className="single-sidebar-widget__title">Recent post</h3>
-          {recentPosts?.map((post, i) => (
-            <div className="rp-widget-item" key={i}>
+          {recentPosts?.map((post) => (
+            <div className="rp-widget-item" key={post?._id}>
               <div className="rp-widget-item__thumb">
-                <img src={post.img} alt="thumb" />
+                <img src={post.img} alt="thumb" loading="lazy" />
               </div>
               <div className="rp-widget-item__content">
                 <p className="rp-widget-item__content-category">
@@ -67,10 +66,10 @@ const BlogSidebar = () => {
         <div className="single-sidebar-widget tag-widget mb-60">
           <h3 className="single-sidebar-widget__title">Tags</h3>
           <ul className="single-widget-tag">
-            {sidebarTags?.map((tag, i) => (
-              <li key={i}>
+            {sidebarTags?.map((tag) => (
+              <li key={tag?._id}>
                 <Link className="single-widget-tag__item" to="#!">
-                  {tag}
+                  {tag?.name}
                 </Link>
               </li>
             ))}

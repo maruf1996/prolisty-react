@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 import Select from "react-select";
 import { Link } from "react-router-dom";
@@ -90,8 +90,8 @@ const ListingPage = () => {
                 <div className="single-sidebar-widget">
                   <h5 className="widget-title">Tag</h5>
                   <ul className="tagcloud">
-                    {listingPageTag?.map((tag, i) => (
-                      <li key={i}>
+                    {listingPageTag?.map((tag) => (
+                      <li key={tag?._id}>
                         <Link to={`/category-listing/${tag?.slug}`}>
                           {tag?.name}
                         </Link>
@@ -104,9 +104,9 @@ const ListingPage = () => {
                 <div className="single-sidebar-widget">
                   <h5 className="widget-title">Review star</h5>
                   <div className="categories-list">
-                    {[5, 4, 3, 2, 1].map((count, i) => (
+                    {[5, 4, 3, 2, 1].map((count) => (
                       <label
-                        key={i}
+                        key={count}
                         className="checkbox-single d-flex align-items-center"
                       >
                         <span className="d-flex gap-xl-3 gap-2 align-items-center">
@@ -167,13 +167,17 @@ const ListingPage = () => {
               <div className="listings-card-wrapper">
                 <div className="row">
                   {featureCategoryData?.map((item) => (
-                    <div className="col-md-6" key={item.id}>
+                    <div className="col-md-6" key={item?._id}>
                       <div className="listing-categories1-card">
                         <div className="listing-categories1-card__thumb">
-                          <img src={item.img} alt={item.title} />
+                          <img
+                            src={item?.img}
+                            alt={item?.title}
+                            loading="lazy"
+                          />
                           <div className="badge-wrapper">
-                            <div className="badge">{item.badge}</div>
-                            <div className="badge2">{item.badge2}</div>
+                            <div className="badge">{item?.badge}</div>
+                            <div className="badge2">{item?.badge2}</div>
                           </div>
                         </div>
                         <div className="listing-categories1-card-content">
@@ -182,12 +186,12 @@ const ListingPage = () => {
                               to={`/listing-details/${item?.slug}`}
                               className="listing-categories1-card-content__title"
                             >
-                              {item.title}
+                              {item?.title}
                             </Link>
                           </h3>
                           <div className="listing-categories1-card-content__price">
                             <p className="listing-categories1-card-content__price-text">
-                              {item.price}
+                              {item?.price}
                             </p>
                             <Link
                               to={`/listing-details/${item?.slug}`}
@@ -200,7 +204,7 @@ const ListingPage = () => {
                             <ul className="listing-categories1-card-content__ratings-list">
                               {Array.from({ length: 5 }, (_, i) => (
                                 <li key={i}>
-                                  <img src={star} alt="star" />
+                                  <img src={star} alt="star" loading="lazy" />
                                 </li>
                               ))}
                             </ul>

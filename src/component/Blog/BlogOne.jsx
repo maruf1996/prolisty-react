@@ -1,7 +1,5 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import blogBg from "/images/blog/blog-bg1.png";
 import subTitleShape from "/images/about/sub-title-shape.png";
 import blogMeta1 from "/images/blog/blog-meta1_1.svg";
 import blogMeta2 from "/images/blog/blog-meta1_2.svg";
@@ -10,10 +8,7 @@ import { blogOneData } from "../../data/site";
 
 const BlogOne = () => {
   return (
-    <section
-      className="blog1 section-padding fix bg-img bg-color1 slider-nav-area"
-      style={{ backgroundImage: `url(${blogBg})` }}
-    >
+    <section className="blog1 section-padding fix bg-img bg-color1 slider-nav-area">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
@@ -21,7 +16,7 @@ const BlogOne = () => {
               <h6 className="section-title__subtitle">
                 Blog Listing
                 <span className="shape">
-                  <img src={subTitleShape} alt="shape" />
+                  <img src={subTitleShape} alt="shape" loading="lazy" />
                 </span>
               </h6>
               <h2 className="section-title__title">The Latest in Listing</h2>
@@ -52,17 +47,17 @@ const BlogOne = () => {
           }}
           className="blog1-slider"
         >
-          {blogOneData?.map((item, index) => (
-            <SwiperSlide key={index}>
+          {blogOneData?.map((item) => (
+            <SwiperSlide key={item?._id}>
               <div className="blog1-card">
                 <div className="blog1-card__thumb">
-                  <img src={item.img} alt="thumb" />
+                  <img src={item.img} alt="thumb" loading="lazy" />
                 </div>
                 <div className="blog1-card-content">
                   <div className="blog1-card-content__meta">
                     <div className="blog1-card-content__meta-item">
                       <div className="blog1-card-content__meta-item-icon">
-                        <img src={blogMeta1} alt="Icon" />
+                        <img src={blogMeta1} alt="Icon" loading="lazy" />
                       </div>
                       <div className="blog1-card-content__meta-item-text">
                         {item.date}
@@ -70,7 +65,7 @@ const BlogOne = () => {
                     </div>
                     <div className="blog1-card-content__meta-item">
                       <div className="blog1-card-content__meta-item-icon">
-                        <img src={blogMeta2} alt="Icon" />
+                        <img src={blogMeta2} alt="Icon" loading="lazy" />
                       </div>
                       <p className="blog1-card-content__meta-item-text">
                         {item.comments} Comment

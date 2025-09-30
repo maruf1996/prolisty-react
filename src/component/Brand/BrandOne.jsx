@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
@@ -34,10 +33,14 @@ const BrandOne = () => {
               }}
             >
               {brandOneData?.map((brand) => (
-                <SwiperSlide key={brand.id}>
+                <SwiperSlide key={brand?._id}>
                   <div className="brand1-slider__item">
-                    <Link to={`/brand-${brand.id}`}>
-                      <img src={brand.img} alt={`Brand ${brand.id}`} />
+                    <Link to={`/brand-${brand?._id}`}>
+                      <img
+                        src={brand.img}
+                        alt={`Brand ${brand._id}`}
+                        loading="lazy"
+                      />
                     </Link>
                   </div>
                 </SwiperSlide>

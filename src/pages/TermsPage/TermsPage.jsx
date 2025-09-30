@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 
 const TermsPage = () => {

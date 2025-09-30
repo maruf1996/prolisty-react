@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 import AboutTwo from "../../component/About/AboutTwo";
 import MarqueeOne from "../../component/Marquee/MarqueeOne";

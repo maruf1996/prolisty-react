@@ -1,14 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import breadcumbBg from "/images/intro/breadcumb.jpg";
 
 const Breadcumb = ({ title }) => {
   return (
     <div className="breadcumb-section">
-      <div
-        className="breadcumb-wrapper background-image"
-        style={{ backgroundImage: `url(${breadcumbBg})` }}
-      >
+      <div className="breadcumb-wrapper background-image">
         <div className="container">
           <div className="row">
             <div className="col-12">

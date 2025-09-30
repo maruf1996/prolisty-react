@@ -1,4 +1,3 @@
-import React from "react";
 import subTitleShape from "/images/about/sub-title-shape.png";
 import aboutThumb1 from "/images/about/about-thumb2_1.jpg";
 import aboutThumb2 from "/images/about/about-thumb2_2.jpg";
@@ -7,6 +6,7 @@ import textShape from "/images/about/about-text-shape2_1.png";
 import arrow from "/images/intro/intro-arrow.svg";
 import aboutShape1 from "/images/about/about-shape2_2.png";
 import OdometerCounter from "../../hooks/OdometerCounter";
+import React from "react";
 
 const AboutThree = () => {
   return (
@@ -16,7 +16,7 @@ const AboutThree = () => {
           <h6 className="section-title__subtitle">
             About Us
             <span className="shape">
-              <img src={subTitleShape} alt="shape" />
+              <img src={subTitleShape} alt="shape" loading="lazy" />
             </span>
           </h6>
           <h2 className="section-title__title">
@@ -30,7 +30,7 @@ const AboutThree = () => {
               <div className="row">
                 <div className="col-md-6">
                   <div className="about3-left__thumb mb-30">
-                    <img src={aboutThumb1} alt="thumb" />
+                    <img src={aboutThumb1} alt="thumb" loading="lazy" />
                   </div>
                   <div className="about3-left-card">
                     <h6 className="about3-left-card__subtitle">
@@ -67,7 +67,7 @@ const AboutThree = () => {
                     </p>
                   </div>
                   <div className="about3-left__thumb">
-                    <img src={aboutThumb2} alt="thumb" />
+                    <img src={aboutThumb2} alt="thumb" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -76,11 +76,26 @@ const AboutThree = () => {
 
           <div className="col-lg-5">
             <div className="about3__thumb-wrapper">
-              <img className="thumb" src={aboutThumb3} alt="thumb" />
+              <img
+                className="thumb"
+                src={aboutThumb3}
+                alt="thumb"
+                loading="lazy"
+              />
               <div className="about3__thumb-shape">
                 <div className="position-relative">
-                  <img className="img1 cir36" src={textShape} alt="shape" />
-                  <img className="img2" src={arrow} alt="arrow" />
+                  <img
+                    className="img1 cir36"
+                    src={textShape}
+                    alt="shape"
+                    loading="lazy"
+                  />
+                  <img
+                    className="img2"
+                    src={arrow}
+                    alt="arrow"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -88,7 +103,7 @@ const AboutThree = () => {
         </div>
 
         <div className="about3__shape1">
-          <img src={aboutShape1} alt="shape" />
+          <img src={aboutShape1} alt="shape" loading="lazy" />
         </div>
       </div>
     </section>

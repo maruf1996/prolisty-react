@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useCallback, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import testiQuote from "/images/testimonial/testi-quote.png";
@@ -11,6 +11,8 @@ import VideoModal from "../../hooks/VideoModal";
 const TestimonialOne = () => {
   const [videoActive, setVideoActive] = useState(false);
 
+  const handleVideoOpen = useCallback(() => setVideoActive(true), []);
+
   return (
     <section className="testimonial1 section-padding fix bg-color1">
       <div className="container">
@@ -18,7 +20,7 @@ const TestimonialOne = () => {
           <h6 className="section-title__subtitle">
             Testimonial
             <span className="shape">
-              <img src={subTitleShape} alt="shape" />
+              <img src={subTitleShape} alt="shape" loading="lazy" />
             </span>
           </h6>
           <h2 className="section-title__title">
@@ -32,10 +34,10 @@ const TestimonialOne = () => {
           {/* Left Thumb */}
           <div className="col-lg-6">
             <div className="testimonial1__thumb">
-              <img src={testiThumb} alt="thumb" />
+              <img src={testiThumb} alt="thumb" loading="lazy" />
               <div className="testimonial1__thumb-video">
                 <button
-                  onClick={() => setVideoActive(true)}
+                  onClick={() => handleVideoOpen(true)}
                   className="testimonial1__thumb-video-btn ripple popup-video"
                 >
                   <i className="fa-solid fa-play"></i>
@@ -65,28 +67,28 @@ const TestimonialOne = () => {
                 }}
                 className="testimonial1-slider"
               >
-                {testimonialOneData?.map((item, index) => (
-                  <SwiperSlide key={index} className="pt-4 pb-4">
+                {testimonialOneData?.map((item) => (
+                  <SwiperSlide key={item?._id} className="pt-4 pb-4">
                     <div className="testimonial1-card">
                       <div className="testimonial1-card__icon">
-                        <img src={testiQuote} alt="icon" />
+                        <img src={testiQuote} alt="icon" loading="lazy" />
                       </div>
                       <div className="testimonial1-card__profile">
                         <div className="testimonial1-card__profile-name">
-                          {item.name}
+                          {item?.name}
                         </div>
                         <div className="testimonial1-card__profile-title">
-                          {item.title}
+                          {item?.title}
                         </div>
                       </div>
                       <div className="testimonial1-card__content">
                         <p className="testimonial1-card__content-text">
-                          {item.text}
+                          {item?.text}
                         </p>
                         <ul className="testimonial1-card__content-ratings">
                           {Array.from({ length: item.rating }).map((_, i) => (
                             <li key={i}>
-                              <img src={star} alt="star" />
+                              <img src={star} alt="star" loading="lazy" />
                             </li>
                           ))}
                         </ul>

@@ -1,9 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import footerBg from "/images/footer/footer-bg.jpg";
 import logoWhite from "/images/logo/white-logo.png";
 import themeArrow from "/images/footer/theme-arrow.svg";
 import CtaOne from "../Cta/CtaOne";
+import { FooterCategories } from "../../data/site";
+import { FooterLocation } from "../../data/site";
+import { FooterMenu } from "../../data/site";
 
 const Footer = ({ title }) => {
   return (
@@ -12,7 +13,6 @@ const Footer = ({ title }) => {
         className={`footer1-bg bg-img ${
           title === "layout-one" ? "pt-110" : ""
         }`}
-        style={{ backgroundImage: `url(${footerBg})` }}
       >
         {title === "layout-one" && <CtaOne title="home-one"></CtaOne>}
 
@@ -22,7 +22,7 @@ const Footer = ({ title }) => {
             <div className="col-xl-4 col-lg-8 col-md-12">
               <div className="footer1-widget__item">
                 <div className="footer1-widget__item-logo">
-                  <img src={logoWhite} alt="logo" />
+                  <img src={logoWhite} alt="logo" loading="lazy" />
                 </div>
                 <p className="footer1-widget__item-text">
                   Lorem Ipsum is simply dummy text of the and typesetting
@@ -87,20 +87,13 @@ const Footer = ({ title }) => {
               <div className="footer1-widget__item">
                 <h3 className="footer1-widget__item-title">Categories</h3>
                 <ul className="footer1-widget__item-list">
-                  {[
-                    "Hostel",
-                    "Restaurant",
-                    "Fitness",
-                    "Real Estate",
-                    "Shopping",
-                    "Health and Medical",
-                  ].map((item, idx) => (
-                    <li key={idx}>
+                  {FooterCategories?.map((item) => (
+                    <li key={item?._id}>
                       <Link to="/category-listings">
                         <span>
-                          <img src={themeArrow} alt="icon" />
+                          <img src={themeArrow} alt="icon" loading="lazy" />
                         </span>{" "}
-                        {item}
+                        {item?.title}
                       </Link>
                     </li>
                   ))}
@@ -113,20 +106,13 @@ const Footer = ({ title }) => {
               <div className="footer1-widget__item footer1-widget__item-2">
                 <h3 className="footer1-widget__item-title">Location</h3>
                 <ul className="footer1-widget__item-list">
-                  {[
-                    "Evergreen Heights , Japan",
-                    "Golden Ridge Villas , UK",
-                    "Aurora Fields , US",
-                    "Khulna , Bangladesh",
-                    "New York , USA",
-                    "Paris , France",
-                  ].map((loc, idx) => (
-                    <li key={idx}>
+                  {FooterLocation?.map((location) => (
+                    <li key={location?._id}>
                       <Link to="/location-listings">
                         <span>
-                          <img src={themeArrow} alt="icon" />
+                          <img src={themeArrow} alt="icon" loading="lazy" />
                         </span>{" "}
-                        {loc}
+                        {location?.title}
                       </Link>
                     </li>
                   ))}
@@ -139,20 +125,15 @@ const Footer = ({ title }) => {
               <div className="footer1-widget__item">
                 <h3 className="footer1-widget__item-title">Footer Menu</h3>
                 <ul className="footer1-widget__item-list">
-                  {[
-                    "Home",
-                    "Privacy Policy",
-                    "Terms and Conditions",
-                    "Blog",
-                    "Contact us",
-                    "Pricing",
-                  ].map((menu, idx) => (
-                    <li key={idx}>
-                      <Link to={`/${menu.toLowerCase().replace(/ /g, "-")}`}>
+                  {FooterMenu?.map((menu) => (
+                    <li key={menu?._id}>
+                      <Link
+                        to={`/${menu?.title.toLowerCase().replace(/ /g, "-")}`}
+                      >
                         <span>
-                          <img src={themeArrow} alt="icon" />
+                          <img src={themeArrow} alt="icon" loading="lazy" />
                         </span>{" "}
-                        {menu}
+                        {menu?.title}
                       </Link>
                     </li>
                   ))}
@@ -170,15 +151,21 @@ const Footer = ({ title }) => {
                   Powered by <a href="/">Themeforest</a>
                 </p>
                 <ul className="footer1-bottom-item__list">
-                  {["twitter", "linkedin-in", "facebook-f"].map(
-                    (social, idx) => (
-                      <li key={idx}>
-                        <Link to="#">
-                          <i className={`fa-brands fa-${social}`}></i>
-                        </Link>
-                      </li>
-                    )
-                  )}
+                  <li>
+                    <Link to="#">
+                      <i className="fa-brands fa-twitter"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

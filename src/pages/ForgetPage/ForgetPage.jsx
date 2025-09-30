@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 import GoogleIcon from "/images/icon/googleIcon.png";
 import AppleIcon from "/images/icon/appleIcon.png";
@@ -50,14 +49,14 @@ const ForgetPage = () => {
                     <div className="button-items-1">
                       <a href="#!">
                         <div className="button-items-1__google-button">
-                          <img src={GoogleIcon} alt="icon" />
+                          <img src={GoogleIcon} alt="icon" loading="lazy" />
                           <p>Sign in with Google</p>
                         </div>
                       </a>
 
                       <a href="#!">
                         <div className="button-items-1__apple-button">
-                          <img src={AppleIcon} alt="icon" />
+                          <img src={AppleIcon} alt="icon" loading="lazy" />
                           <p>Sign in with Apple</p>
                         </div>
                       </a>
@@ -72,7 +71,11 @@ const ForgetPage = () => {
 
               <div className="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
                 <div className="login-thumb">
-                  <img src={ForgetPassImg} alt="forget-pass-thumb" />
+                  <img
+                    src={ForgetPassImg}
+                    alt="forget-pass-thumb"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>

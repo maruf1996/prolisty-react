@@ -11,9 +11,9 @@
   }
   .sticky-wrapper.sticky {
     background: $white-color2;
-    padding: 20px 0;
+    padding: 25px 0;
     animation: none;
-    transition: 0.5s;
+    transition: 0.3s;
     .global-header-menu-area {
       box-shadow: none;
       background-color: transparent;
@@ -669,6 +669,15 @@
       &:nth-child(2) {
         width: 32px;
       }
+    }
+  }
+}
+
+.menu-item-has-children {
+  .sub-menu {
+    display: none;
+    &.show {
+      display: block;
     }
   }
 }

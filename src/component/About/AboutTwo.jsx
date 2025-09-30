@@ -1,13 +1,10 @@
-import React from "react";
 import subTitleShape from "/images/about/sub-title-shape.png";
 import themeListIcon from "/images/icon/theme-list-icon.svg";
 import aboutShape1 from "/images/about/about2-shape1_1.png";
 import aboutShape2 from "/images/about/about2-shape1_2.png";
 import aboutShape3 from "/images/about/about2-shape1_3.png";
 import aboutThumb1 from "/images/about/about2-thumb1_1.jpg";
-import aboutThumbmask2 from "/images/about/about2-thumb1_2.png";
 import aboutThumb2 from "/images/about/about2-thumb1_2.jpg";
-import aboutThumbmask3 from "/images/about/about2-thumb1_3.png";
 import aboutThumb3 from "/images/about/about2-thumb1_3.jpg";
 import { Link } from "react-router-dom";
 
@@ -23,7 +20,7 @@ const AboutTwo = () => {
                 <h6 className="section-title__subtitle">
                   About us{" "}
                   <span className="shape">
-                    <img src={subTitleShape} alt="shape" />
+                    <img src={subTitleShape} alt="shape" loading="lazy" />
                   </span>
                 </h6>
                 <h2 className="section-title__title">
@@ -40,25 +37,45 @@ const AboutTwo = () => {
               <ul className="about1-content__list">
                 <li className="about1-content__list-item">
                   <span>
-                    <img className="svg" src={themeListIcon} alt="icon" />
+                    <img
+                      className="svg"
+                      src={themeListIcon}
+                      alt="icon"
+                      loading="lazy"
+                    />
                   </span>
                   Quality real estate services
                 </li>
                 <li className="about1-content__list-item">
                   <span>
-                    <img className="svg" src={themeListIcon} alt="icon" />
+                    <img
+                      className="svg"
+                      src={themeListIcon}
+                      alt="icon"
+                      loading="lazy"
+                    />
                   </span>
                   100% Satisfaction guarantee
                 </li>
                 <li className="about1-content__list-item">
                   <span>
-                    <img className="svg" src={themeListIcon} alt="icon" />
+                    <img
+                      className="svg"
+                      src={themeListIcon}
+                      alt="icon"
+                      loading="lazy"
+                    />
                   </span>
                   Highly professional team
                 </li>
                 <li className="about1-content__list-item">
                   <span>
-                    <img className="svg" src={themeListIcon} alt="icon" />
+                    <img
+                      className="svg"
+                      src={themeListIcon}
+                      alt="icon"
+                      loading="lazy"
+                    />
                   </span>
                   Dealing always on time
                 </li>
@@ -76,34 +93,22 @@ const AboutTwo = () => {
           <div className="col-xl-6 order-1 order-md-2">
             <div className="about2-thumb">
               <div className="about2-thumb-shape__one">
-                <img src={aboutShape1} alt="shape" />
+                <img src={aboutShape1} alt="shape" loading="lazy" />
               </div>
               <div className="about2-thumb-shape__two">
-                <img src={aboutShape2} alt="shape" />
+                <img src={aboutShape2} alt="shape" loading="lazy" />
               </div>
               <div className="about2-thumb-shape__three">
-                <img src={aboutShape3} alt="shape" />
+                <img src={aboutShape3} alt="shape" loading="lazy" />
               </div>
               <div className="about2-thumb__one">
-                <img src={aboutThumb1} alt="thumb" />
+                <img src={aboutThumb1} alt="thumb" loading="lazy" />
               </div>
-              <div
-                className="about2-thumb__two bg-mask"
-                style={{
-                  maskImage: `url(${aboutThumbmask2})`,
-                  WebkitMaskImage: `url(${aboutThumbmask2})`,
-                }}
-              >
-                <img src={aboutThumb2} alt="thumb" />
+              <div className="about2-thumb__two bg-mask">
+                <img src={aboutThumb2} alt="thumb" loading="lazy" />
               </div>
-              <div
-                className="about2-thumb__three bg-mask"
-                style={{
-                  maskImage: `url(${aboutThumbmask3})`,
-                  WebkitMaskImage: `url(${aboutThumbmask3})`,
-                }}
-              >
-                <img src={aboutThumb3} alt="thumb" />
+              <div className="about2-thumb__three bg-mask">
+                <img src={aboutThumb3} alt="thumb" loading="lazy" />
               </div>
             </div>
           </div>

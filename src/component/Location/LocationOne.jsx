@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 import subTitleShape from "/images/about/sub-title-shape.png";
@@ -17,7 +16,7 @@ const LocationOne = () => {
           <h6 className="section-title__subtitle">
             Feature Listing
             <span className="shape">
-              <img src={subTitleShape} alt="shape" />
+              <img src={subTitleShape} alt="shape" loading="lazy" />
             </span>
           </h6>
           <h2 className="section-title__title">
@@ -31,7 +30,7 @@ const LocationOne = () => {
           <div className="col-lg-6">
             <div className="location2-card">
               <div className="location2-card__thumb">
-                <img src={locationThumb1} alt="thumb" />
+                <img src={locationThumb1} alt="thumb" loading="lazy" />
                 <button className="badge" type="button">
                   <i className="fa-sharp fa-regular fa-heart"></i>
                 </button>
@@ -55,7 +54,7 @@ const LocationOne = () => {
                   <ul className="location2-card-content__ratings-list">
                     {[...Array(5)].map((_, i) => (
                       <li key={i}>
-                        <img src={star} alt="star" />
+                        <img src={star} alt="star" loading="lazy" />
                       </li>
                     ))}
                   </ul>
@@ -73,14 +72,19 @@ const LocationOne = () => {
               <div className="col-md-6">
                 <div className="location2-card style2">
                   <div className="location2-card__thumb">
-                    <img src={locationThumb2} alt="thumb" />
+                    <img src={locationThumb2} alt="thumb" loading="lazy" />
                     <button className="badge" type="button">
                       <i className="fa-sharp fa-regular fa-heart"></i>
                     </button>
                   </div>
                   <div className="location2-card-arrow">
                     <Link to={`/listing-details/2`}>
-                      <img className="svg-img" src={arrowIcon} alt="arrow" />
+                      <img
+                        className="svg-img"
+                        src={arrowIcon}
+                        alt="arrow"
+                        loading="lazy"
+                      />
                     </Link>
                   </div>
                 </div>
@@ -89,14 +93,19 @@ const LocationOne = () => {
               <div className="col-md-6">
                 <div className="location2-card style2">
                   <div className="location2-card__thumb">
-                    <img src={locationThumb3} alt="thumb" />
+                    <img src={locationThumb3} alt="thumb" loading="lazy" />
                     <button className="badge" type="button">
                       <i className="fa-sharp fa-regular fa-heart"></i>
                     </button>
                   </div>
                   <div className="location2-card-arrow">
                     <Link to={`/listing-details/3`}>
-                      <img className="svg-img" src={arrowIcon} alt="arrow" />
+                      <img
+                        className="svg-img"
+                        src={arrowIcon}
+                        alt="arrow"
+                        loading="lazy"
+                      />
                     </Link>
                   </div>
                 </div>
@@ -106,7 +115,7 @@ const LocationOne = () => {
             {/* Bottom big card */}
             <div className="location2-card">
               <div className="location2-card__thumb">
-                <img src={locationThumb4} alt="thumb" />
+                <img src={locationThumb4} alt="thumb" loading="lazy" />
                 <button className="badge" type="button">
                   <i className="fa-sharp fa-regular fa-heart"></i>
                 </button>
@@ -130,7 +139,7 @@ const LocationOne = () => {
                   <ul className="location2-card-content__ratings-list">
                     {[...Array(5)].map((_, i) => (
                       <li key={i}>
-                        <img src={star} alt="star" />
+                        <img src={star} alt="star" loading="lazy" />
                       </li>
                     ))}
                   </ul>

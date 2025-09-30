@@ -1,6 +1,3 @@
-import React from "react";
-import ctaBg from "/images/cta/cta-bg1.png";
-
 const CtaOne = ({ title }) => {
   return (
     <div className="cta1">
@@ -9,7 +6,6 @@ const CtaOne = ({ title }) => {
           className={`cta1-card
           ${title === "home-one" ? "mb-80 mt-0" : ""}
           ${title === "home-two" ? "m-mt-60" : ""}`}
-          style={{ backgroundImage: `url(${ctaBg})` }}
         >
           <div className="cta1-card-left">
             <h6 className="cta1-card-left__subtitle">Newsletter</h6>

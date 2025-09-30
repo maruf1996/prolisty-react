@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 
 const PrivacyPage = () => {
@@ -68,7 +67,7 @@ const PrivacyPage = () => {
                       We may collect your personal information through any of
                       the following methods:
                     </p>
-                    <ul style={{ listStyleType: "square" }}>
+                    <ul className="square-list">
                       <li>
                         Voluntary disclosure: We may obtain information you
                         provide us directly either at this website, when

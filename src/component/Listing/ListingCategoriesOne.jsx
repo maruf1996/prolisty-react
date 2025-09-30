@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Isotope from "isotope-layout";
 import { Link } from "react-router-dom";
 import subTitleShape from "/images/about/sub-title-shape.png";
@@ -9,6 +9,10 @@ import imagesLoaded from "imagesloaded";
 const ListingCategoriesOne = () => {
   const isotope = useRef(null);
   const [filterKey, setFilterKey] = useState("*");
+
+  const handleFilter = useCallback((key) => {
+    setFilterKey(key);
+  }, []);
 
   useEffect(() => {
     const grid = document.querySelector(".category1-wrapper");
@@ -39,7 +43,7 @@ const ListingCategoriesOne = () => {
               <h6 className="section-title__subtitle">
                 Feature Listing{" "}
                 <span className="shape">
-                  <img src={subTitleShape} alt="shape" />
+                  <img src={subTitleShape} alt="shape" loading="lazy" />
                 </span>
               </h6>
               <h2 className="section-title__title">
@@ -50,31 +54,31 @@ const ListingCategoriesOne = () => {
             <div className="button-group category1-button-group">
               <button
                 className={filterKey === "*" ? "is-checked" : ""}
-                onClick={() => setFilterKey("*")}
+                onClick={() => handleFilter("*")}
               >
                 View all
               </button>
               <button
                 className={filterKey === "hostel" ? "is-checked" : ""}
-                onClick={() => setFilterKey("hostel")}
+                onClick={() => handleFilter("hostel")}
               >
                 Hostel
               </button>
               <button
                 className={filterKey === "restaurant" ? "is-checked" : ""}
-                onClick={() => setFilterKey("restaurant")}
+                onClick={() => handleFilter("restaurant")}
               >
                 Restaurant
               </button>
               <button
                 className={filterKey === "fitness" ? "is-checked" : ""}
-                onClick={() => setFilterKey("fitness")}
+                onClick={() => handleFilter("fitness")}
               >
                 Fitness
               </button>
               <button
                 className={filterKey === "real-estate" ? "is-checked" : ""}
-                onClick={() => setFilterKey("real-estate")}
+                onClick={() => handleFilter("real-estate")}
               >
                 Real Estate
               </button>
@@ -83,34 +87,38 @@ const ListingCategoriesOne = () => {
         </div>
 
         <div className="row category1-wrapper">
-          {featureCategoryData?.map((cat) => (
+          {featureCategoryData?.map((category) => (
             <div
-              key={cat.id}
-              className={`col-xl-4 col-md-6 category1-item ${cat.filter}`}
+              key={category?._id}
+              className={`col-xl-4 col-md-6 category1-item ${category?.filter}`}
             >
               <div className="listing-categories1-card">
                 <div className="listing-categories1-card__thumb">
-                  <img src={cat.img} alt={cat.title} />
+                  <img
+                    src={category?.img}
+                    alt={category?.title}
+                    loading="lazy"
+                  />
                   <div className="badge-wrapper">
-                    <div className="badge">{cat.badge}</div>
-                    <div className="badge2">{cat.badge2}</div>
+                    <div className="badge">{category?.badge}</div>
+                    <div className="badge2">{category?.badge2}</div>
                   </div>
                 </div>
                 <div className="listing-categories1-card-content">
                   <h3>
                     <Link
-                      to={`/listing-details/${cat?.slug}`}
+                      to={`/listing-details/${category?.slug}`}
                       className="listing-categories1-card-content__title"
                     >
-                      {cat.title}
+                      {category?.title}
                     </Link>
                   </h3>
                   <div className="listing-categories1-card-content__price">
                     <p className="listing-categories1-card-content__price-text">
-                      {cat.price}
+                      {category?.price}
                     </p>
                     <Link
-                      to={`/listing-details/${cat?.slug}`}
+                      to={`/listing-details/${category?.slug}`}
                       className="listing-categories1-card-content__price-details theme-btn style3"
                     >
                       Details
@@ -120,7 +128,7 @@ const ListingCategoriesOne = () => {
                     <ul className="listing-categories1-card-content__ratings-list">
                       {[...Array(5)].map((_, i) => (
                         <li key={i}>
-                          <img src={star} alt="star" />
+                          <img src={star} alt="star" loading="lazy" />
                         </li>
                       ))}
                     </ul>

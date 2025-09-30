@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import subTitleShape from "/images/about/sub-title-shape.png";
 import serviceTop from "/images/service/service-top.png";
@@ -15,7 +14,7 @@ const ServiceOne = () => {
               <h6 className="section-title__subtitle text-white">
                 Our Services
                 <span className="shape">
-                  <img src={subTitleShape} alt="shape" />
+                  <img src={subTitleShape} alt="shape" loading="lazy" />
                 </span>
               </h6>
               <h2 className="section-title__title text-white">
@@ -26,7 +25,7 @@ const ServiceOne = () => {
           </div>
           <div className="col-lg-6">
             <div className="service1__thumb">
-              <img src={serviceTop} alt="thumb" />
+              <img src={serviceTop} alt="thumb" loading="lazy" />
             </div>
           </div>
         </div>
@@ -49,7 +48,7 @@ const ServiceOne = () => {
                   you make an informed decision
                 </p>
                 <div className="service1-item-content__thumb">
-                  <img src={serviceThumb} alt="img" />
+                  <img src={serviceThumb} alt="img" loading="lazy" />
                 </div>
                 <div className="service1-item-content__btn-wrapper">
                   <Link className="service-btn" to="/contact">
@@ -78,7 +77,7 @@ const ServiceOne = () => {
                   you make an informed decision
                 </p>
                 <div className="service1-item-content__thumb">
-                  <img src={serviceThumb} alt="img" />
+                  <img src={serviceThumb} alt="img" loading="lazy" />
                 </div>
                 <div className="service1-item-content__btn-wrapper">
                   <Link className="service-btn" to="/contact">
@@ -107,7 +106,7 @@ const ServiceOne = () => {
                   you make an informed decision
                 </p>
                 <div className="service1-item-content__thumb">
-                  <img src={serviceThumb} alt="img" />
+                  <img src={serviceThumb} alt="img" loading="lazy" />
                 </div>
                 <div className="service1-item-content__btn-wrapper">
                   <Link className="service-btn" to="/contact">
@@ -122,7 +121,7 @@ const ServiceOne = () => {
 
       {/* Shape */}
       <div className="service1__shape">
-        <img src={serviceShape} alt="shape" />
+        <img src={serviceShape} alt="shape" loading="lazy" />
       </div>
     </section>
   );

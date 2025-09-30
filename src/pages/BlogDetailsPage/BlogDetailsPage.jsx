@@ -1,4 +1,3 @@
-import React from "react";
 import blogThumb1 from "/images/blog/blog-details-thumb1_1.jpg";
 import blogThumb2 from "/images/blog/blog-details-thumb1_2.jpg";
 import blogThumb3 from "/images/blog/blog-details-thumb1_3.jpg";
@@ -17,7 +16,7 @@ const BlogDetailsPage = () => {
             <div className="col-xl-8">
               <div className="blog-details-card">
                 <div className="blog-details-card__thumb hover-img">
-                  <img src={blogThumb1} alt="thumb" />
+                  <img src={blogThumb1} alt="thumb" loading="lazy" />
                 </div>
                 <h3 className="blog-details-card__title">
                   Shine Brighter with Listings
@@ -110,12 +109,12 @@ const BlogDetailsPage = () => {
               <div className="row">
                 <div className="col-md-6">
                   <div className="blog-details__thumb hover-img mt-2">
-                    <img src={blogThumb2} alt="thumb" />
+                    <img src={blogThumb2} alt="thumb" loading="lazy" />
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="blog-details__thumb hover-img mt-2">
-                    <img src={blogThumb3} alt="thumb" />
+                    <img src={blogThumb3} alt="thumb" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -131,9 +130,9 @@ const BlogDetailsPage = () => {
                 <div className="blog-details-tag__list">
                   <h4 className="blog-details-tag__list-title">Tags:</h4>
                   <ul>
-                    {sidebarTags?.slice(0, 3).map((tag, index) => (
-                      <li key={index}>
-                        <a href="#!">{tag}</a>
+                    {sidebarTags?.slice(0, 3).map((tag) => (
+                      <li key={tag?._id}>
+                        <a href="#!">{tag?.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -177,8 +176,8 @@ const BlogDetailsPage = () => {
               {/* Comments */}
               <div className="blog-details-comment">
                 <h3 className="blog-details-comment__title">1 Comment</h3>
-                {[1, 2].map((c, index) => (
-                  <div className="blog-details-comment-box" key={index}>
+                {[1, 2].map((i) => (
+                  <div className="blog-details-comment-box" key={i}>
                     <h5 className="blog-details-comment-box__user">
                       Chis Hawel
                     </h5>

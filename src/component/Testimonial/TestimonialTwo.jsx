@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import starIcon from "/images/location/star.svg";
@@ -16,7 +15,7 @@ const TestimonialTwo = () => {
           <h6 className="section-title__subtitle">
             Testimonial
             <span className="shape">
-              <img src={subTitleShape} alt="shape" />
+              <img src={subTitleShape} alt="shape" loading="lazy" />
             </span>
           </h6>
           <h2 className="section-title__title">
@@ -28,7 +27,7 @@ const TestimonialTwo = () => {
           {/* Left Thumb */}
           <div className="col-lg-5">
             <div className="testimonial2__thumb">
-              <img src={testimonialThumb} alt="thumb" />
+              <img src={testimonialThumb} alt="thumb" loading="lazy" />
             </div>
           </div>
 
@@ -54,26 +53,26 @@ const TestimonialTwo = () => {
                 }}
               >
                 {testimonialTwoData?.map((item) => (
-                  <SwiperSlide key={item.id} className="pt-4 pb-4">
+                  <SwiperSlide key={item?._id} className="pt-4 pb-4">
                     <div className="testimonial2-card">
                       {/* Profile */}
                       <div className="testimonial2-card__profile">
                         <div className="testimonial2-card__profile-name">
-                          {item.name}
+                          {item?.name}
                         </div>
                         <div className="testimonial2-card__profile-title">
-                          {item.title}
+                          {item?.title}
                         </div>
                       </div>
                       {/* Content */}
                       <div className="testimonial2-card__content">
                         <p className="testimonial2-card__content-text">
-                          {item.text}
+                          {item?.text}
                         </p>
                         <ul className="testimonial2-card__content-ratings">
-                          {Array.from({ length: item.rating }).map((_, i) => (
+                          {Array?.from({ length: item?.rating }).map((_, i) => (
                             <li key={i}>
-                              <img src={starIcon} alt="star" />
+                              <img src={starIcon} alt="star" loading="lazy" />
                             </li>
                           ))}
                         </ul>
@@ -98,7 +97,7 @@ const TestimonialTwo = () => {
 
         {/* Shape */}
         <div className="testimonial2-shape1">
-          <img src={testimonialShape} alt="shape" />
+          <img src={testimonialShape} alt="shape" loading="lazy" />
         </div>
       </div>
     </section>

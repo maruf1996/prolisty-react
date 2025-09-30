@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Select from "react-select";
-import introBg from "/images/intro/intro-bg2_1.jpg";
 import thumb1 from "/images/intro/intro-thumb2_1.jpg";
 import thumb2 from "/images/intro/intro-thumb2_2.jpg";
 import circleShape from "/images/intro/intro-circle-shape2.png";
@@ -19,10 +18,7 @@ const IntroThree = () => {
   const [priceRange, setPriceRange] = useState(null);
 
   return (
-    <section
-      className="intro3 fix bg-img"
-      style={{ backgroundImage: `url(${introBg})` }}
-    >
+    <section className="intro3 fix bg-img">
       <div className="container position-relative">
         <div className="row">
           <div className="col-12">
@@ -40,15 +36,25 @@ const IntroThree = () => {
 
               <div className="intro3-thumb-wrapper">
                 <div className="thumb1">
-                  <img src={thumb1} alt="thumb1" />
+                  <img src={thumb1} alt="thumb1" loading="lazy" />
                 </div>
                 <div className="thumb2">
-                  <img src={thumb2} alt="thumb2" />
+                  <img src={thumb2} alt="thumb2" loading="lazy" />
                 </div>
                 <div className="intro3-shape3">
                   <div className="position-relative">
-                    <img className="img1 cir36" src={circleShape} alt="shape" />
-                    <img className="img2" src={arrow} alt="arrow" />
+                    <img
+                      className="img1 cir36"
+                      src={circleShape}
+                      alt="shape"
+                      loading="lazy"
+                    />
+                    <img
+                      className="img2"
+                      src={arrow}
+                      alt="arrow"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -114,20 +120,20 @@ const IntroThree = () => {
               </div>
 
               <div className="listing-search1__shape1">
-                <img src={searchShape1} alt="shape1" />
+                <img src={searchShape1} alt="shape1" loading="lazy" />
               </div>
               <div className="listing-search1__shape2">
-                <img src={searchShape2} alt="shape2" />
+                <img src={searchShape2} alt="shape2" loading="lazy" />
               </div>
             </div>
           </div>
         </div>
 
         <div className="intro3-shape1">
-          <img src={introShape1} alt="shape1" />
+          <img src={introShape1} alt="shape1" loading="lazy" />
         </div>
         <div className="intro3-shape2">
-          <img src={introShape2} alt="shape2" />
+          <img src={introShape2} alt="shape2" loading="lazy" />
         </div>
       </div>
     </section>

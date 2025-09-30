@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Select from "react-select";
 import { locationOptions } from "../../data/site";
 import { listingOptions } from "../../data/site";

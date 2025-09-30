@@ -1,4 +1,3 @@
-import React from "react";
 import IntroThree from "../../component/Intro/IntroThree";
 import AboutThree from "../../component/About/AboutThree";
 import LocationThree from "../../component/Location/LocationThree";

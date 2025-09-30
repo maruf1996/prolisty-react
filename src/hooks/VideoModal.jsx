@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoModal = ({ videoActive, setVideoActive, videoSrc }) => {
+const VideoModal = React.memo(({ videoActive, setVideoActive, videoSrc }) => {
   if (!videoActive) return null;
 
   return (
@@ -30,6 +30,6 @@ const VideoModal = ({ videoActive, setVideoActive, videoSrc }) => {
       </div>
     </div>
   );
-};
+});
 
 export default VideoModal;

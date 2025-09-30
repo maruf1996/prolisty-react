@@ -1,4 +1,3 @@
-import React from "react";
 import subTitleShape from "/images/about/sub-title-shape.png";
 import star from "/images/location/star.svg";
 import locationShape from "/images/location/location3-shape1.png";
@@ -14,7 +13,7 @@ const LocationThree = () => {
           <h6 className="section-title__subtitle">
             Luxury Feature
             <span className="shape">
-              <img src={subTitleShape} alt="shape" />
+              <img src={subTitleShape} alt="shape" loading="lazy" />
             </span>
           </h6>
           <h2 className="section-title__title">Our Exclusive Listings</h2>
@@ -23,12 +22,12 @@ const LocationThree = () => {
         {/* Cards */}
         <div className="row">
           {locationThreeData?.map((item) => (
-            <div className="col-xl-4 col-md-6" key={item.id}>
+            <div className="col-xl-4 col-md-6" key={item?._id}>
               <div className="location3-card">
                 <div className="location3-card__thumb">
-                  <img src={item.thumb} alt="thumb" />
+                  <img src={item?.thumb} alt="thumb" loading="lazy" />
                   <div className="badge">
-                    {item.badge}{" "}
+                    {item?.badge}{" "}
                     <span>
                       <i className="fa-light fa-camera"></i>
                     </span>{" "}
@@ -45,26 +44,26 @@ const LocationThree = () => {
                     <span>
                       <i className="fa-sharp fa-light fa-location-dot"></i>
                     </span>{" "}
-                    {item.country}
+                    {item?.country}
                   </h6>
                   <h3>
                     <Link
                       to={`/listing-details/${item?.slug}`}
                       className="location3-card-content__location"
                     >
-                      {item.title}
+                      {item?.title}
                     </Link>
                   </h3>
                   <div className="location3-card-content__ratings">
                     <ul className="location3-card-content__ratings-list">
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <li key={index}>
-                          <img src={star} alt="star" />
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <li key={i}>
+                          <img src={star} alt="star" loading="lazy" />
                         </li>
                       ))}
                     </ul>
                     <p className="location3-card-content__ratings-reviews">
-                      ( {item.reviews} Reviews )
+                      ( {item?.reviews} Reviews )
                     </p>
                   </div>
                 </div>
@@ -76,7 +75,7 @@ const LocationThree = () => {
 
       {/* Shape */}
       <div className="location3-shape1">
-        <img src={locationShape} alt="Shape" />
+        <img src={locationShape} alt="Shape" loading="lazy" />
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import whiteLogo from "/images/logo/white-logo.png";
 import themeLogo from "/images/logo/theme-logo.png";
@@ -58,7 +58,7 @@ const Header = () => {
           {/* Mobile Logo */}
           <div className="mobile-logo">
             <Link to="/">
-              <img src={whiteLogo} alt="Prolisty" />
+              <img src={whiteLogo} alt="Prolisty" loading="lazy" />
             </Link>
           </div>
 
@@ -80,9 +80,8 @@ const Header = () => {
                 </Link>
                 <ul
                   className={`sub-menu ${
-                    activeSubmenu === 0 ? "global-open" : ""
+                    activeSubmenu === 0 ? "global-open show" : ""
                   }`}
-                  style={{ display: activeSubmenu === 0 ? "block" : "none" }}
                 >
                   <li>
                     <Link className="active" to="/">
@@ -123,9 +122,8 @@ const Header = () => {
                 </Link>
                 <ul
                   className={`sub-menu ${
-                    activeSubmenu === 1 ? "global-open" : ""
+                    activeSubmenu === 1 ? "global-open show" : ""
                   }`}
-                  style={{ display: activeSubmenu === 1 ? "block" : "none" }}
                 >
                   <li>
                     <Link to="/locations">Locations</Link>
@@ -187,7 +185,7 @@ const Header = () => {
                 <div className="col-xl-2 col-2">
                   <div className="header-logo">
                     <Link to="/">
-                      <img src={themeLogo} alt="Prolisty" />
+                      <img src={themeLogo} alt="Prolisty" loading="lazy" />
                     </Link>
                   </div>
                 </div>
@@ -296,8 +294,13 @@ const Header = () => {
                   <div className="global-header1-header-button">
                     <div className="btn-wrapper">
                       <Link className="theme-btn style1" to="/add-listing">
-                        <img className="svg" src={arrowIcon} alt="arrow" /> Add
-                        to Listing
+                        <img
+                          className="svg"
+                          src={arrowIcon}
+                          alt="arrow"
+                          loading="lazy"
+                        />{" "}
+                        Add to Listing
                       </Link>
                     </div>
                     <div className="d-none d-xxl-block">
@@ -309,6 +312,7 @@ const Header = () => {
                                 className="svg"
                                 src={bagedIcon1}
                                 alt="icon"
+                                loading="lazy"
                               />
                             </Link>
                             <span className="badge">0</span>
@@ -319,6 +323,7 @@ const Header = () => {
                                 className="svg"
                                 src={bagedIcon2}
                                 alt="icon"
+                                loading="lazy"
                               />
                             </Link>
                             <span className="badge">0</span>
@@ -329,6 +334,7 @@ const Header = () => {
                                 className="svg"
                                 src={bagedIcon3}
                                 alt="icon"
+                                loading="lazy"
                               />
                             </Link>
                           </li>

@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 import loginImg from "/images/login/login.jpg";
 import googleIcon from "/images/icon/googleIcon.png";
@@ -81,14 +80,14 @@ const LoginPage = () => {
                     <div className="button-items-1">
                       <a href="#!">
                         <div className="button-items-1__google-button">
-                          <img src={googleIcon} alt="icon" />
+                          <img src={googleIcon} alt="icon" loading="lazy" />
                           <p>Sign in with Google</p>
                         </div>
                       </a>
 
                       <a href="#!">
                         <div className="button-items-1__apple-button">
-                          <img src={appleIcon} alt="icon" />
+                          <img src={appleIcon} alt="icon" loading="lazy" />
                           <p>Sign in with Apple</p>
                         </div>
                       </a>
@@ -103,7 +102,7 @@ const LoginPage = () => {
 
               <div className="col-xl-6 offset-xl-0 col-md-8 offset-md-2">
                 <div className="login-thumb">
-                  <img src={loginImg} alt="register-thumb" />
+                  <img src={loginImg} alt="register-thumb" loading="lazy" />
                 </div>
               </div>
             </div>

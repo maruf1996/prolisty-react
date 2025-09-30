@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ModalForm from "../../hooks/ModalForm";
 import VideoModal from "../../hooks/VideoModal";
@@ -27,12 +27,7 @@ const ListingDetailsPage = () => {
       <ModalForm title="Submit Report" dataTarget="report_modal" />
 
       {/* Breadcrumb Section */}
-      <div
-        className="breadcrumb-wrapper bg-img"
-        style={{
-          backgroundImage: "url(/images/intro/common-intro-bg1_1.jpg)",
-        }}
-      >
+      <div className="breadcrumb-wrapper bg-img">
         <div className="container">
           <div className="breadcrumb-content">
             <h1 className="breadcrumb-content__title">
@@ -137,7 +132,11 @@ const ListingDetailsPage = () => {
                   <div className="row popup-gallery">
                     <div className="col-md-6">
                       <div className="gallery-item">
-                        <img src={gallaryImg1} alt="Gallery Image" />
+                        <img
+                          src={gallaryImg1}
+                          alt="Gallery Image"
+                          loading="lazy"
+                        />
                         <div className="gallery-overly">
                           <button onClick={() => setSelectedImage(gallaryImg1)}>
                             <i className="fa-solid fa-plus"></i>
@@ -147,7 +146,11 @@ const ListingDetailsPage = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="gallery-item">
-                        <img src={gallaryImg2} alt="Gallery Image" />
+                        <img
+                          src={gallaryImg2}
+                          alt="Gallery Image"
+                          loading="lazy"
+                        />
                         <div className="gallery-overly">
                           <button onClick={() => setSelectedImage(gallaryImg2)}>
                             <i className="fa-solid fa-plus"></i>
@@ -173,7 +176,7 @@ const ListingDetailsPage = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="video-item">
-                        <img src={videoImg1} alt="img" />
+                        <img src={videoImg1} alt="img" loading="lazy" />
                         <div className="video-item-overlay">
                           <button
                             onClick={() => setVideoActive(true)}
@@ -186,7 +189,7 @@ const ListingDetailsPage = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="video-item">
-                        <img src={videoImg2} alt="img" />
+                        <img src={videoImg2} alt="img" loading="lazy" />
                         <div className="video-item-overlay ">
                           <button
                             onClick={() => setVideoActive(true)}
@@ -210,7 +213,7 @@ const ListingDetailsPage = () => {
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.1644726412524!2d-72.35277188518384!3d41.283524779273854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e62268e8620931%3A0x88b1bc148a89e421!2s2%20Bridge%20St%2C%20Old%20Saybrook%2C%20CT%2006475%2C%20USA!5e0!3m2!1sen!2sbd!4v1625913163080!5m2!1sen!2sbd"
                       width="600"
                       height="450"
-                      style={{ border: 0 }}
+                      className="border-0"
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
@@ -314,7 +317,7 @@ const ListingDetailsPage = () => {
                   <div className="reviews-wrapper">
                     <div className="reviews-item">
                       <div className="reviews-item__photo">
-                        <img src={reviewThumb1} alt="thumb" />
+                        <img src={reviewThumb1} alt="thumb" loading="lazy" />
                       </div>
                       <div className="reviews-item-info">
                         <div className="name">Robert Cook</div>
@@ -333,7 +336,7 @@ const ListingDetailsPage = () => {
                     </div>
                     <div className="reviews-item">
                       <div className="reviews-item__photo">
-                        <img src={reviewThumb2} alt="thumb" />
+                        <img src={reviewThumb2} alt="thumb" loading="lazy" />
                       </div>
                       <div className="reviews-item-info">
                         <div className="name">Samin Shikder</div>
@@ -374,7 +377,7 @@ const ListingDetailsPage = () => {
                   <h5 className="widget-title">Agent</h5>
                   <div className="single-sidebar-widget-agent">
                     <div className="single-sidebar-widget-agent__thumb">
-                      <img src={reviewThumb3} alt="thumb" />
+                      <img src={reviewThumb3} alt="thumb" loading="lazy" />
                     </div>
                     <div className="single-sidebar-widget-agent__info">
                       <h3>
@@ -452,10 +455,10 @@ const ListingDetailsPage = () => {
                   <div className="single-sidebar-widget-openning-hour">
                     <table className="table table-bordered">
                       <tbody>
-                        {openingHours.map((item, i) => (
-                          <tr key={i}>
-                            <td>{item.day}</td>
-                            <td>{item.time}</td>
+                        {openingHours.map((item) => (
+                          <tr key={item?._id}>
+                            <td>{item?.day}</td>
+                            <td>{item?.time}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -468,11 +471,11 @@ const ListingDetailsPage = () => {
                   <h5 className="widget-title">Categories</h5>
                   <div className="single-sidebar-widget-category">
                     <ul>
-                      {categories.map((cat, i) => (
-                        <li key={i}>
-                          <a href="#!">
-                            <i className="fas fa-angle-right"></i> {cat.name}
-                          </a>
+                      {categories?.map((cat) => (
+                        <li key={cat?._id}>
+                          <Link to={`/listing-details/${cat?.slug}`}>
+                            <i className="fas fa-angle-right"></i> {cat?.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -484,11 +487,11 @@ const ListingDetailsPage = () => {
                   <h5 className="widget-title">Location</h5>
                   <div className="single-sidebar-widget-location">
                     <ul>
-                      {locations.map((loc, i) => (
-                        <li key={i}>
-                          <a href="#!">
+                      {locations.map((loc) => (
+                        <li key={loc?._id}>
+                          <Link to={`/listing-details/${loc?.slug}`}>
                             <i className="fas fa-angle-right"></i> {loc.name}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>

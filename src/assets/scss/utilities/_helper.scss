@@ -302,3 +302,47 @@ input:focus {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.square-list {
+  list-style-type: square !important;
+}
+
+.image-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-image {
+  max-height: 80vh;
+  max-width: 90vw;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; // icon size
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}

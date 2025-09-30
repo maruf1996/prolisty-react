@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcumb from "../../component/Breadcumb/Breadcumb";
 import faqImg from "/images/faq/faq-thumb1.jpg";
 
@@ -126,7 +125,7 @@ const FaqPage = () => {
             </div>
             <div className="col-lg-6">
               <div className="faq1-thumb img-custom-anim-right">
-                <img src={faqImg} alt="thumb" />
+                <img src={faqImg} alt="thumb" loading="lazy" />
               </div>
             </div>
           </div>

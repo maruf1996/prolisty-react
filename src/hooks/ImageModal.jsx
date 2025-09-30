@@ -1,54 +1,27 @@
-import React from "react";
+import React, { useCallback } from "react";
 
-const ImageModal = ({ imgSrc, onClose }) => {
+const ImageModalComponent = ({ imgSrc, onClose }) => {
+  const handleCloseModal = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
   if (!imgSrc) return null;
 
   return (
-    <div
-      className="image-modal-backdrop"
-      onClick={onClose}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100vw",
-        height: "100vh",
-        background: "rgba(0,0,0,0.8)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 9999,
-      }}
-    >
+    <div className="image-modal-backdrop" onClick={handleCloseModal}>
       <div
-        className="image-modal-content"
+        className="image-modal-content position-relative"
         onClick={(e) => e.stopPropagation()}
-        style={{ position: "relative" }}
       >
-        <img
-          src={imgSrc}
-          alt="popup"
-          style={{ maxHeight: "80vh", maxWidth: "90vw", borderRadius: "4px" }}
-        />
-        <button
-          onClick={onClose}
-          style={{
-            position: "absolute",
-            top: "-10px",
-            right: "-10px",
-            background: "#fff",
-            borderRadius: "50%",
-            border: "none",
-            width: "30px",
-            height: "30px",
-            cursor: "pointer",
-          }}
-        >
+        <img src={imgSrc} alt="popup" className="popup-image" loading="lazy" />
+        <button onClick={handleCloseModal} className="modal-close-btn">
           ✕
         </button>
       </div>
     </div>
   );
 };
+
+const ImageModal = React.memo(ImageModalComponent);
 
 export default ImageModal;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Isotope from "isotope-layout";
 import { Link } from "react-router-dom";
 import subTitleShape from "/images/about/sub-title-shape.png";
@@ -9,6 +9,10 @@ import imagesLoaded from "imagesloaded";
 const LocationTwo = () => {
   const isotope = useRef(null);
   const [filterKey, setFilterKey] = useState("*");
+
+  const handleFilter = useCallback((key) => {
+    setFilterKey(key);
+  }, []);
 
   useEffect(() => {
     const grid = document.querySelector(".location1-wrapper");
@@ -39,7 +43,7 @@ const LocationTwo = () => {
               <h6 className="section-title__subtitle">
                 Listing City
                 <span className="shape">
-                  <img src={subTitleShape} alt="shape" />
+                  <img src={subTitleShape} alt="shape" loading="lazy" />
                 </span>
               </h6>
               <h2 className="section-title__title">
@@ -49,25 +53,25 @@ const LocationTwo = () => {
             <div className="button-group location1-button-group">
               <button
                 className={filterKey === "*" ? "is-checked" : ""}
-                onClick={() => setFilterKey("*")}
+                onClick={() => handleFilter("*")}
               >
                 Top Listing
               </button>
               <button
                 className={filterKey === "popular" ? "is-checked" : ""}
-                onClick={() => setFilterKey("popular")}
+                onClick={() => handleFilter("popular")}
               >
                 Popular
               </button>
               <button
                 className={filterKey === "featured" ? "is-checked" : ""}
-                onClick={() => setFilterKey("featured")}
+                onClick={() => handleFilter("featured")}
               >
                 Featured
               </button>
               <button
                 className={filterKey === "recommended" ? "is-checked" : ""}
-                onClick={() => setFilterKey("recommended")}
+                onClick={() => handleFilter("recommended")}
               >
                 Recommended
               </button>
@@ -78,34 +82,34 @@ const LocationTwo = () => {
         <div className="row location1-wrapper">
           {locationTwoData?.map((loc) => (
             <div
-              key={loc.id}
-              className={`col-xl-4 col-md-6 location1-item ${loc.filter}`}
+              key={loc?._id}
+              className={`col-xl-4 col-md-6 location1-item ${loc?.filter}`}
             >
               <div className="location1-card">
                 <div className="location1-card__thumb">
-                  <img src={loc.img} alt={loc.meta} />
-                  <div className="badge">{loc.badge}</div>
+                  <img src={loc?.img} alt={loc?.meta} loading="lazy" />
+                  <div className="badge">{loc?.badge}</div>
                 </div>
                 <div className="location1-card-content">
                   <h6 className="location1-card-content__meta">
                     <span>
                       <i className="fa-sharp fa-light fa-location-dot" />
                     </span>{" "}
-                    {loc.meta}
+                    {loc?.meta}
                   </h6>
                   <h3>
                     <Link
                       to={`/listing-details/${loc?.slug}`}
                       className="location1-card-content__location"
                     >
-                      {loc.title}
+                      {loc?.title}
                     </Link>
                   </h3>
                   <div className="location1-card-content__ratings">
                     <ul className="location1-card-content__ratings-list">
                       {[...Array(5)].map((_, i) => (
                         <li key={i}>
-                          <img src={star} alt="star" />
+                          <img src={star} alt="star" loading="lazy" />
                         </li>
                       ))}
                     </ul>

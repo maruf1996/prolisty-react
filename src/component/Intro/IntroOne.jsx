@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Select from "react-select";
 import { locationOptions } from "../../data/site";
 import { listingOptions } from "../../data/site";
@@ -10,12 +10,7 @@ const IntroOne = () => {
   const [priceRange, setPriceRange] = useState(null);
 
   return (
-    <section
-      className="intro1 fix background-image"
-      style={{
-        backgroundImage: "url(/images/intro/intro-bg1_1.jpg)",
-      }}
-    >
+    <section className="intro1 fix background-image">
       <div className="container position-relative">
         <div className="row">
           <div className="col-lg-12">
@@ -26,7 +21,11 @@ const IntroOne = () => {
               <h1 className="intro1-content__title">
                 Turning Your{" "}
                 <span>
-                  <img src="/images/intro/intro-star.png" alt="star" />
+                  <img
+                    src="/images/intro/intro-star.png"
+                    alt="star"
+                    loading="lazy"
+                  />
                 </span>{" "}
                 Listing Dreams into Reality.
               </h1>

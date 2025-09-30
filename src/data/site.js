@@ -42,7 +42,7 @@ export const priceOptions = [
 // FeatureOneData
 export const FeatureOneData = [
   {
-    id: 1,
+    _id: "1",
     thumb: "/images/listing-categories/listing1_1.jpg",
     location: "Sunset Meadows, London",
     title: "First-Time Homebuyers to Secure the Best Deal.",
@@ -53,7 +53,7 @@ export const FeatureOneData = [
     price: "$ 70,600",
   },
   {
-    id: 2,
+    _id: "2",
     thumb: "/images/listing-categories/listing1_2.jpg",
     location: "Oakwood Estates, London",
     title: "Top Neighborhoods for Renting Need to Know.",
@@ -64,7 +64,7 @@ export const FeatureOneData = [
     price: "$ 10,000",
   },
   {
-    id: 3,
+    _id: "3",
     thumb: "/images/listing-categories/listing1_3.jpg",
     location: "Lakeside Haven, London",
     title: "Home Quickly Without Compromising Value",
@@ -75,7 +75,7 @@ export const FeatureOneData = [
     price: "$ 88,600",
   },
   {
-    id: 4,
+    _id: "4",
     thumb: "/images/listing-categories/listing1_1.jpg",
     location: "Sunset Meadows, London",
     title: "First-Time Homebuyers to Secure the Best Deal.",
@@ -90,7 +90,7 @@ export const FeatureOneData = [
 // plansData
 export const plansData = [
   {
-    id: 1,
+    _id: "1",
     title: "Basic",
     price: "$ 21/mo",
     icon: "/images/price/price1.png",
@@ -105,7 +105,7 @@ export const plansData = [
     highlight: false,
   },
   {
-    id: 2,
+    _id: "2",
     title: "Enterprise",
     price: "$ 30/mo",
     icon: "/images/price/price2.png",
@@ -120,7 +120,7 @@ export const plansData = [
     highlight: true,
   },
   {
-    id: 3,
+    _id: "3",
     title: "Business",
     price: "$ 21/mo",
     icon: "/images/price/price1.png",
@@ -139,6 +139,7 @@ export const plansData = [
 // blogOneData
 export const blogOneData = [
   {
+    _id: "1",
     img: "/images/blog/blog-thumb1_1.jpg",
     date: "19 Dec, 2024",
     comments: 3,
@@ -146,6 +147,7 @@ export const blogOneData = [
     slug: "discover-the-future-of-technology-1",
   },
   {
+    _id: "2",
     img: "/images/blog/blog-thumb1_2.jpg",
     date: "19 Dec, 2024",
     comments: 3,
@@ -153,6 +155,7 @@ export const blogOneData = [
     slug: "discover-the-future-of-technology-2",
   },
   {
+    _id: "3",
     img: "/images/blog/blog-thumb1_3.jpg",
     date: "19 Dec, 2024",
     comments: 3,
@@ -160,6 +163,7 @@ export const blogOneData = [
     slug: "discover-the-future-of-technology-3",
   },
   {
+    _id: "4",
     img: "/images/blog/blog-thumb1_2.jpg",
     date: "19 Dec, 2024",
     comments: 3,
@@ -168,68 +172,10 @@ export const blogOneData = [
   },
 ];
 
-// locationOneData
-export const locationTwoData = [
-  {
-    id: 1,
-    img: "/images/location/location-thumb1_1.jpg",
-    badge: "1 Listing",
-    meta: "Canary Wharf (London)",
-    title: "United States",
-    filter: "featured",
-    slug: "united-states",
-  },
-  {
-    id: 2,
-    img: "/images/location/location-thumb1_2.jpg",
-    badge: "2 Listing",
-    meta: "Canary Wharf (London)",
-    title: "New York",
-    filter: "recommended popular",
-    slug: "new-york",
-  },
-  {
-    id: 3,
-    img: "/images/location/location-thumb1_3.jpg",
-    badge: "1 Listing",
-    meta: "Champs-Élysées (Paris)",
-    title: "Canada",
-    filter: "featured",
-    slug: "canada",
-  },
-  {
-    id: 4,
-    img: "/images/location/location-thumb1_4.jpg",
-    badge: "4 Listing",
-    meta: "Canary Wharf (London, UK)",
-    title: "Australia",
-    filter: "recommended popular",
-    slug: "australia",
-  },
-  {
-    id: 5,
-    img: "/images/location/location-thumb1_1.jpg",
-    badge: "3 Listing",
-    meta: "Shinjuku (Tokyo)",
-    title: "Russia",
-    filter: "featured",
-    slug: "russia",
-  },
-  {
-    id: 6,
-    img: "/images/location/location-thumb1_6.jpg",
-    badge: "1 Listing",
-    meta: "Canary Wharf (London)",
-    title: "United States",
-    filter: "popular",
-    slug: "united-states",
-  },
-];
-
 // featureCategoryData
 export const featureCategoryData = [
   {
-    id: 1,
+    _id: "1",
     img: "/images/listing-categories/categories1_1.jpg",
     title: "Hostel",
     badge: "1 Listing",
@@ -240,7 +186,7 @@ export const featureCategoryData = [
     reviews: 5,
   },
   {
-    id: 2,
+    _id: "2",
     img: "/images/listing-categories/categories1_2.jpg",
     title: "Restaurant",
     badge: "4 Listing",
@@ -251,7 +197,7 @@ export const featureCategoryData = [
     reviews: 5,
   },
   {
-    id: 3,
+    _id: "3",
     img: "/images/listing-categories/categories1_3.jpg",
     title: "Fitness",
     badge: "1 Listing",
@@ -262,7 +208,7 @@ export const featureCategoryData = [
     reviews: 5,
   },
   {
-    id: 4,
+    _id: "4",
     img: "/images/listing-categories/categories1_4.jpg",
     title: "Real Estate",
     badge: "4 Listing",
@@ -273,7 +219,7 @@ export const featureCategoryData = [
     reviews: 5,
   },
   {
-    id: 5,
+    _id: "5",
     img: "/images/listing-categories/categories1_5.jpg",
     title: "Shopping",
     badge: "2 Listing",
@@ -284,7 +230,7 @@ export const featureCategoryData = [
     reviews: 5,
   },
   {
-    id: 6,
+    _id: "6",
     img: "/images/listing-categories/categories1_6.jpg",
     title: "Health",
     badge: "1 Listing",
@@ -298,29 +244,32 @@ export const featureCategoryData = [
 
 // brandOneData
 export const brandOneData = [
-  { id: 1, img: "/images/brand/brand1_1.png" },
-  { id: 2, img: "/images/brand/brand1_2.png" },
-  { id: 3, img: "/images/brand/brand1_3.png" },
-  { id: 4, img: "/images/brand/brand1_4.png" },
-  { id: 5, img: "/images/brand/brand1_5.png" },
-  { id: 6, img: "/images/brand/brand1_3.png" },
+  { _id: "1", img: "/images/brand/brand1_1.png" },
+  { _id: "2", img: "/images/brand/brand1_2.png" },
+  { _id: "3", img: "/images/brand/brand1_3.png" },
+  { _id: "4", img: "/images/brand/brand1_4.png" },
+  { _id: "5", img: "/images/brand/brand1_5.png" },
+  { _id: "6", img: "/images/brand/brand1_3.png" },
 ];
 
 // testimonialOneData
 export const testimonialOneData = [
   {
+    _id: "1",
     name: "Sarah Johnson",
     title: "Homeowner",
     text: "Working with this team was a seamless and rewarding experience. They truly understood my needs and helped me find the perfect home in no time! Exceptional service and attention to detail! They made selling my property stress-free.",
     rating: 5,
   },
   {
+    _id: "2",
     name: "Michael Smith",
     title: "Business Owner",
     text: "Working with this team was a seamless and rewarding experience. They truly understood my needs and helped me find the perfect home in no time! Exceptional service and attention to detail! They made selling my property stress-free.",
     rating: 5,
   },
   {
+    _id: "3",
     name: "Emily Davis",
     title: "Investor",
     text: "Working with this team was a seamless and rewarding experience. They truly understood my needs and helped me find the perfect home in no time! Exceptional service and attention to detail! They made selling my property stress-free.",
@@ -331,21 +280,21 @@ export const testimonialOneData = [
 // testimonialTwoData
 export const testimonialTwoData = [
   {
-    id: 1,
+    _id: "1",
     name: "Sarah Johnson",
     title: "Homeowner",
     text: "Working with this team was a seamless and rewarding experience. They truly understood my needs and helped me find the perfect home in no time! Exceptional service and attention to detail! They made selling my property stress-free.",
     rating: 5,
   },
   {
-    id: 2,
+    _id: "2",
     name: "Michael Smith",
     title: "Investor",
     text: "Working with this team was a seamless and rewarding experience. They truly understood my needs and helped me find the perfect home in no time! Exceptional service and attention to detail! They made selling my property stress-free.",
     rating: 5,
   },
   {
-    id: 3,
+    _id: "3",
     name: "Emily Davis",
     title: "Seller",
     text: "Working with this team was a seamless and rewarding experience. They truly understood my needs and helped me find the perfect home in no time! Exceptional service and attention to detail! They made selling my property stress-free.",
@@ -353,10 +302,68 @@ export const testimonialTwoData = [
   },
 ];
 
+// locationTwoData
+export const locationTwoData = [
+  {
+    _id: "1",
+    img: "/images/location/location-thumb1_1.jpg",
+    badge: "1 Listing",
+    meta: "Canary Wharf (London)",
+    title: "United States",
+    filter: "featured",
+    slug: "united-states",
+  },
+  {
+    _id: "2",
+    img: "/images/location/location-thumb1_2.jpg",
+    badge: "2 Listing",
+    meta: "Canary Wharf (London)",
+    title: "New York",
+    filter: "recommended popular",
+    slug: "new-york",
+  },
+  {
+    _id: "3",
+    img: "/images/location/location-thumb1_3.jpg",
+    badge: "1 Listing",
+    meta: "Champs-Élysées (Paris)",
+    title: "Canada",
+    filter: "featured",
+    slug: "canada",
+  },
+  {
+    _id: "4",
+    img: "/images/location/location-thumb1_4.jpg",
+    badge: "4 Listing",
+    meta: "Canary Wharf (London, UK)",
+    title: "Australia",
+    filter: "recommended popular",
+    slug: "australia",
+  },
+  {
+    _id: "5",
+    img: "/images/location/location-thumb1_1.jpg",
+    badge: "3 Listing",
+    meta: "Shinjuku (Tokyo)",
+    title: "Russia",
+    filter: "featured",
+    slug: "russia",
+  },
+  {
+    _id: "6",
+    img: "/images/location/location-thumb1_6.jpg",
+    badge: "1 Listing",
+    meta: "Canary Wharf (London)",
+    title: "United States",
+    filter: "popular",
+    slug: "united-states",
+  },
+];
+
 // locationThreeData
 export const locationThreeData = [
   {
-    id: 1,
+    _id: "1",
     thumb: "/images/location/location-thumb3_1.jpg",
     badge: "Hotel",
     country: "Japan",
@@ -365,7 +372,7 @@ export const locationThreeData = [
     slug: "best-neighborhoods-to-rent",
   },
   {
-    id: 2,
+    _id: "2",
     thumb: "/images/location/location-thumb3_2.jpg",
     badge: "Restaurant",
     country: "UK",
@@ -374,7 +381,7 @@ export const locationThreeData = [
     slug: "tips-for-first-time-homebuyers",
   },
   {
-    id: 3,
+    _id: "3",
     thumb: "/images/location/location-thumb3_3.jpg",
     badge: "Real Estate",
     country: "UK",
@@ -387,7 +394,7 @@ export const locationThreeData = [
 // listingTwoData
 export const listingTwoData = [
   {
-    id: 1,
+    _id: "1",
     thumb: "/images/listing-categories/listing-thumb2_1.jpg",
     meta: "Le Marais (Paris, France)",
     country: "France",
@@ -395,7 +402,7 @@ export const listingTwoData = [
     slug: "france",
   },
   {
-    id: 2,
+    _id: "2",
     thumb: "/images/listing-categories/listing-thumb2_2.jpg",
     meta: "Plaka (Athens, Greece)",
     country: "Italy",
@@ -403,7 +410,7 @@ export const listingTwoData = [
     slug: "italy",
   },
   {
-    id: 3,
+    _id: "3",
     thumb: "/images/listing-categories/listing-thumb2_3.jpg",
     meta: "Westlands (Nairobi, Kenya)",
     country: "Spain",
@@ -411,7 +418,7 @@ export const listingTwoData = [
     slug: "spain",
   },
   {
-    id: 4,
+    _id: "4",
     thumb: "/images/listing-categories/listing-thumb2_4.jpg",
     meta: "Ponsonby (Auckland, New Zealand)",
     country: "South Africa",
@@ -419,7 +426,7 @@ export const listingTwoData = [
     slug: "south-africa",
   },
   {
-    id: 5,
+    _id: "5",
     thumb: "/images/listing-categories/listing-thumb2_5.jpg",
     meta: "Bondi Beach (Sydney, Australia)",
     country: "Mexico",
@@ -427,7 +434,7 @@ export const listingTwoData = [
     slug: "mexico",
   },
   {
-    id: 6,
+    _id: "6",
     thumb: "/images/listing-categories/listing-thumb2_6.jpg",
     meta: "El Jadida (Morocco)",
     country: "Turkey",
@@ -461,44 +468,45 @@ export const sortOptions = [
   { value: "price-desc", label: "Sort by price: high to low" },
 ];
 export const listingPageTag = [
-  { name: "Hostel", slug: "hostel" },
-  { name: "Restaurant", slug: "restaurant" },
-  { name: "Fitness", slug: "fitness" },
-  { name: "Real Estate", slug: "real-estate" },
-  { name: "Shopping", slug: "shopping" },
-  { name: "Health", slug: "health" },
+  { _id: "1", name: "Hostel", slug: "hostel" },
+  { _id: "2", name: "Restaurant", slug: "restaurant" },
+  { _id: "3", name: "Fitness", slug: "fitness" },
+  { _id: "4", name: "Real Estate", slug: "real-estate" },
+  { _id: "5", name: "Shopping", slug: "shopping" },
+  { _id: "6", name: "Health", slug: "health" },
 ];
 
 // listing Details Page data
 export const openingHours = [
-  { day: "Monday", time: "24 Hours Open" },
-  { day: "Tuesday", time: "24 Hours Open" },
-  { day: "Wednesday", time: "24 Hours Open" },
-  { day: "Thursday", time: "24 Hours Open" },
-  { day: "Friday", time: "24 Hours Open" },
-  { day: "Saturday", time: "24 Hours Open" },
-  { day: "Sunday", time: "24 Hours Open" },
+  { _id: "1", day: "Monday", time: "24 Hours Open" },
+  { _id: "2", day: "Tuesday", time: "24 Hours Open" },
+  { _id: "3", day: "Wednesday", time: "24 Hours Open" },
+  { _id: "4", day: "Thursday", time: "24 Hours Open" },
+  { _id: "5", day: "Friday", time: "24 Hours Open" },
+  { _id: "6", day: "Saturday", time: "24 Hours Open" },
+  { _id: "7", day: "Sunday", time: "24 Hours Open" },
 ];
 export const categories = [
-  { name: "Fitness", slug: "fitness" },
-  { name: "Health and Medical", slug: "health-medical" },
-  { name: "Hotel", slug: "hotel" },
-  { name: "Real Estate", slug: "real-estate" },
-  { name: "Restaurant", slug: "restaurant" },
-  { name: "Shopping", slug: "shopping" },
+  { _id: "1", name: "Fitness", slug: "fitness" },
+  { _id: "2", name: "Health and Medical", slug: "health-medical" },
+  { _id: "3", name: "Hotel", slug: "hotel" },
+  { _id: "4", name: "Real Estate", slug: "real-estate" },
+  { _id: "5", name: "Restaurant", slug: "restaurant" },
+  { _id: "6", name: "Shopping", slug: "shopping" },
 ];
 export const locations = [
-  { name: "Chicago, USA", slug: "chicago" },
-  { name: "Khulna, Bangladesh", slug: "khulna" },
-  { name: "London, UK", slug: "london" },
-  { name: "NewYork, USA", slug: "newyork" },
-  { name: "Paris, France", slug: "paris" },
-  { name: "Tokyo, Japan", slug: "tokyo" },
+  { _id: "1", name: "Chicago, USA", slug: "chicago" },
+  { _id: "2", name: "Khulna, Bangladesh", slug: "khulna" },
+  { _id: "3", name: "London, UK", slug: "london" },
+  { _id: "4", name: "NewYork, USA", slug: "newyork" },
+  { _id: "5", name: "Paris, France", slug: "paris" },
+  { _id: "6", name: "Tokyo, Japan", slug: "tokyo" },
 ];
 
 // Blog Page Data
 export const blogPageData = [
   {
+    _id: "1",
     img: "/images/blog/blog-thumb3_1.jpg",
     date: "October 19, 2023",
     comments: "Comments (05)",
@@ -507,6 +515,7 @@ export const blogPageData = [
     slug: "harness-the-power",
   },
   {
+    _id: "2",
     img: "/images/blog/blog-thumb3_2.jpg",
     date: "October 19, 2023",
     comments: "Comments (05)",
@@ -514,6 +523,7 @@ export const blogPageData = [
     slug: "shine-brighter",
   },
   {
+    _id: "3",
     img: "/images/blog/blog-thumb3_3.jpg",
     date: "October 19, 2023",
     comments: "Comments (05)",
@@ -524,25 +534,28 @@ export const blogPageData = [
 
 // Blog Sidebar Data
 export const sidebarCategories = [
-  { name: "Listingize Your Home", number: "01" },
-  { name: "Energy Systems", number: "02" },
-  { name: "Listing Technologies", number: "03" },
-  { name: "Listing Services", number: "04" },
+  { _id: "1", name: "Listingize Your Home", number: "01" },
+  { _id: "2", name: "Energy Systems", number: "02" },
+  { _id: "3", name: "Listing Technologies", number: "03" },
+  { _id: "4", name: "Listing Services", number: "04" },
 ];
 export const recentPosts = [
   {
+    _id: "1",
     img: "/images/blog/rp-thumb1_1.jpg",
     category: "Category",
     title: "Listing Solutions for Your Energy",
     slug: "listing-solutions",
   },
   {
+    _id: "2",
     img: "/images/blog/rp-thumb1_2.jpg",
     category: "Category",
     title: "Embrace Listing is a Sustainability",
     slug: "embrace-listing",
   },
   {
+    _id: "3",
     img: "/images/blog/rp-thumb1_3.jpg",
     category: "Category",
     title: "Listinglight to Power Your World",
@@ -550,9 +563,35 @@ export const recentPosts = [
   },
 ];
 export const sidebarTags = [
-  "Listinglight Solutions",
-  "Energy Systems",
-  "Listing Spark",
-  "Services",
-  "Energy",
+  { _id: "1", title: "Listinglight Solutions" },
+  { _id: "2", title: "Energy Systems" },
+  { _id: "3", title: "Listing Spark" },
+  { _id: "4", title: "Services" },
+  { _id: "5", title: "Energy" },
+];
+
+// Footer Data
+export const FooterCategories = [
+  { _id: "1", title: "Hostel" },
+  { _id: "2", title: "Restaurant" },
+  { _id: "3", title: "Fitness" },
+  { _id: "4", title: "Real Estate" },
+  { _id: "5", title: "Shopping" },
+  { _id: "6", title: "Health and Medical" },
+];
+export const FooterLocation = [
+  { _id: "1", title: "Evergreen Heights , Japan" },
+  { _id: "2", title: "Golden Ridge Villas , UK" },
+  { _id: "3", title: "Aurora Fields , US" },
+  { _id: "4", title: "Khulna , Bangladesh" },
+  { _id: "5", title: "New York , USA" },
+  { _id: "6", title: "Paris , France" },
+];
+export const FooterMenu = [
+  { _id: "1", title: "Home" },
+  { _id: "2", title: "Privacy Policy" },
+  { _id: "3", title: "Terms and Conditions" },
+  { _id: "4", title: "Blog" },
+  { _id: "5", title: "Contact us" },
+  { _id: "6", title: "Pricing" },
 ];
